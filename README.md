@@ -1,2 +1,3 @@
 # portfolio
-My 
+My personal UX/UI portfolio
+Learning to code by doing it myself

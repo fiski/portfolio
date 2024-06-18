@@ -1,0 +1,148 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+h1 {
+
+    color: hsl(0, 0%, 14%);
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    color: hsl(0, 0%, 46%);
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.top_nav {
+    background-color: rgb(188, 188, 188);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.left {
+    
+}
+
+.right {
+    display: flex;
+    gap: 2rem;
+}
+
+.container {
+    /* background-color: bisque; */
+    border: 1px solid #000;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 100vh;
+    padding-top: 2rem;
+    
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+.content-block {
+    background-color: rgb(210, 210, 210);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    height: 20rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 21.6px 3px rgba(93, 93, 93, 0.12);
+
+}
+
+.about {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    
+}
+
+.experience {
+    grid-column-start: 9;
+    grid-column-end: 13;
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}
+
+.four {
+    grid-column-start: 5;
+    grid-column-end: 13;
+}
+
+.five {
+    grid-column: 1 / 9;
+}

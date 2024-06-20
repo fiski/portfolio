@@ -46,10 +46,18 @@
   }
 
 
+
+
+p {
+    color: hsl(0, 0%, 14%);
+    font-family: "Nokora", sans-serif;
+}  
+
+
 h1 {
 
     color: hsl(0, 0%, 14%);
-    font-family: "Afacad", sans-serif;
+    font-family: "Nokora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -57,14 +65,14 @@ h1 {
 
 h3 {
     color: hsl(0, 0%, 46%);
-    font-family: "Afacad", sans-serif;
+    font-family: "Nokora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
 .top_nav {
-    background-color: rgb(188, 188, 188);
+    /* background-color: rgb(188, 188, 188); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +95,7 @@ h3 {
 
 .container {
     /* background-color: bisque; */
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -109,11 +117,14 @@ h3 {
 
 .content-block {
     background-color: rgb(210, 210, 210);
+    background-color: white;
     padding: 1.5rem;
-    display: block;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: white;
+    justify-content: space-between;
+    gap: 4rem;
+   
     height: 100%; 
     border-radius: 0.5rem;
     box-shadow: 2px 2px 21.6px 3px rgba(93, 93, 93, 0.12);
@@ -140,11 +151,20 @@ h3 {
 .four {
     grid-column-start: 5;
     grid-column-end: 13;
+    background-image: url("/assets/images/placeholder.png");
+    background-position: 0 0, 0 0;
+    background-size: cover;
 }
 
 .five {
     grid-column: 1 / 5;
     grid-row: 3/ 5;
+    background-image: url("/assets/images/placeholder.svg");
+    background-position: 0 0, 0 0;
+    background-size: cover;
+    
+
+    
 }
 
 .six {
@@ -158,4 +178,23 @@ h3 {
 
 .eight {
     grid-column: 8 / 13;
+}
+
+.card-title {
+    background-color: #B8B8B8;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 1rem;
+    line-height: 140%;
+    width: fit-content;
+    
+    
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
 }

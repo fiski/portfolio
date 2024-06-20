@@ -104,6 +104,7 @@ h3 {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
 }
@@ -111,12 +112,12 @@ h3 {
 .content-block {
     background-color: rgb(210, 210, 210);
     padding: 1.5rem;
-    display: flex;
+    display: block;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
-    height: 20rem;
-    border-radius: .5rem;
+    height: 100%; 
+    border-radius: 0.5rem;
     box-shadow: 2px 2px 21.6px 3px rgba(93, 93, 93, 0.12);
 
 }
@@ -144,5 +145,19 @@ h3 {
 }
 
 .five {
-    grid-column: 1 / 9;
+    grid-column: 1 / 5;
+    grid-row: 3/ 5;
+}
+
+.six {
+    grid-column: 5 / 13;
+}    
+
+.seven {
+    grid-column: 5 / 8;
+    
+}
+
+.eight {
+    grid-column: 8 / 13;
 }

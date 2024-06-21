@@ -151,7 +151,7 @@ h3 {
 .four {
     grid-column-start: 5;
     grid-column-end: 13;
-    background-image: url("/assets/images/placeholder.png");
+    background-image: url("assets/images/placeholder.png");
     background-position: 0 0, 0 0;
     background-size: cover;
 }

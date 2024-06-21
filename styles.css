@@ -159,7 +159,7 @@ h3 {
 .five {
     grid-column: 1 / 5;
     grid-row: 3/ 5;
-    background-image: url("/assets/images/placeholder.svg");
+    background-image: url("assets/images/placeholder.png");
     background-position: 0 0, 0 0;
     background-size: cover;
     

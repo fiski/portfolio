@@ -228,6 +228,9 @@ h3 {
     background-position: 0 0, 0 0;
     background-size: cover;
     
+    p {
+      font-size: var(--headline---small);
+    }
 
     
 }
@@ -237,6 +240,23 @@ h3 {
     /* grid-column: 5 / 13; */
 }    
 
+.client-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 1rem;
+
+  
+  img{
+    width: 100%;
+    /* flex: 1 0 0; */
+    background-repeat: no-repeat;
+    min-width: 0;
+  }
+}
+
 .expertise {
   grid-area: expertise;
     /* grid-column: 5 / 8; */
@@ -245,7 +265,40 @@ h3 {
 
 .contact {
   grid-area: contact;
+  background-color: var(--color-neutral-grey);
     /* grid-column: 8 / 13; */
+
+}
+
+.contact-info {
+  p{
+    font-size: var(--title---medium);
+    color: var(--color-text-grey)
+  }
+  h3{
+    font-size: var(--headline---small);
+    color: var(--color-text-primary);
+  }
+}
+
+
+
+.links {
+  display: flex;
+  padding-top: 1rem;
+  gap: 2rem;
+  border-top: var(--color-text-grey) 1px solid;
+  
+}
+
+
+
+
+
+
+.titles {
+  display: flex;
+  gap: 1rem;
 }
 
 .card-title {
@@ -257,10 +310,18 @@ h3 {
     width: fit-content;
     font-family: 'Nokora';
     font-size: var(--label---large);
-    
-    
-    
+
+    &.second {
+      background-color: var(--color-ui-border);
+    }
+
+    &.inverted {
+      background-color: white;
+    }
+
+
 }
+
 
 .intro {
   p {

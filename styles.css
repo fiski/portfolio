@@ -315,6 +315,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   p {
     font-size: var(--label---large);
@@ -322,8 +323,34 @@ h3 {
   }
 }
 
+.arrowBtn {
+  padding: 0.5rem 1rem;
+  align-items: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--neutral-grey, #C2C2C2);
+  background-color: white;
+  color: var(--color-text-primary);
 
+}
 
+.arrowBtn:hover{
+  background-color: var(--color-ui-border);
+}
+
+.feather-16{
+  width: 16px;
+  height: 16px;
+}
+
+.feather-24{
+  width: 24px;
+  height: 24px;
+}
+
+.feather-32{
+  width: 32px;
+  height: 32px;
+}
 
 
 @media (max-width: 991px) {

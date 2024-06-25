@@ -77,6 +77,12 @@
 
 h1 {
   font-size: var(--title---large);
+  color: hsl(0, 0%, 14%);
+  font-family: "Nokora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
 }
 
 h3 {
@@ -99,14 +105,7 @@ p {
 }
 
 
-h1 {
 
-    color: hsl(0, 0%, 14%);
-    font-family: "Nokora", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 
 h3 {
     color: hsl(0, 0%, 46%);
@@ -216,8 +215,10 @@ h3 {
     /* grid-column-start: 5;
     grid-column-end: 13; */
     background-image: url("assets/images/placeholder.png");
+    max-width: 100%;
     background-position: 0 0, 0 0;
     background-size: cover;
+
 }
 
 .motto {
@@ -308,7 +309,7 @@ h3 {
     line-height: 1.25rem;
     text-align: center;
     width: fit-content;
-    font-family: 'Nokora';
+    font-family: "Nokora", sans-serif;
     font-size: var(--label---large);
 
     &.second {
@@ -417,7 +418,7 @@ h3 {
 @media (max-width: 991px) {
 
   .container {
-    background-color: blue;
+    /* background-color: blue; */
   }
 
   .grid {
@@ -446,7 +447,7 @@ h3 {
 @media (max-width: 768px) {
 
 .container {
-  background-color:blueviolet
+  /* background-color:blueviolet */
 }
 
   .grid {
@@ -467,5 +468,11 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
   }
+  .right h3 {
+   
+    align-items: flex-start;
+  }
+
 }

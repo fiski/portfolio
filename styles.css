@@ -171,7 +171,7 @@ h3 {
         'work  project project'
         'motto clients clients'
         'motto expertise contact';
-        
+    word-break: break-word;
 }
 
 

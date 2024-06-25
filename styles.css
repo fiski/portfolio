@@ -243,20 +243,29 @@ h3 {
     /* grid-column: 5 / 13; */
 }    
 
-.client-logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  align-self: stretch;
-  gap: 1rem;
+.client-logo-list {
 
-  
-  img{
-    width: 100%;
-    /* flex: 1 0 0; */
-    background-repeat: no-repeat;
-    min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  max-width: 100%
+}
+
+.client-logo-track {
+  display: flex;
+  animation: scroll 8s linear infinite;
+  width: calc(200%);
+}
+
+.client-logo-track img {
+  width: 12.5%;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
   }
 }
 
@@ -481,27 +490,27 @@ h3 {
 
 @media (max-width: 768px) {
 
-.featured-project{
-  
-  background-position: center;
-}
+  .featured-project {
 
-.container {
-  /* background-color:blueviolet */
-}
+    background-position: center;
+  }
+
+  .container {
+    /* background-color:blueviolet */
+  }
 
 
   .grid {
-    grid-template-columns: repeat(1,1fr);
-    grid-template-areas: 
-    "about "
-    "experience "
-    "project "
-    "work "
-    "clients "
-    "expertise "
-    "motto"
-    "contact "
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "about "
+      "experience "
+      "project "
+      "work "
+      "clients "
+      "expertise "
+      "motto"
+      "contact "
     ;
   }
 
@@ -511,9 +520,16 @@ h3 {
     gap: 1rem;
 
   }
+
   .right h3 {
-   
+
     align-items: flex-start;
+  }
+
+  .client-logo-track {
+    display: flex;
+    animation: scroll 12s linear infinite;
+    width: calc(400%);
   }
 
 }

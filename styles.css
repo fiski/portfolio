@@ -270,8 +270,9 @@ h3 {
 }
 
 .word {
+  font-family: "nokora", sans-serif;
+  font-size: var(--title---large);
   position: absolute;
-  font-size: 20px;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;

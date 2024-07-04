@@ -1,0 +1,52 @@
+:root {
+    /* Color styles */
+    --color-blue: hsla(223, 86%, 50%, 1);
+    --color-ui-border: hsla(0, 0%, 88%, 1);
+    --color-neutral-grey: hsla(0, 0%, 76%, 1);
+    --color-text-primary: hsla(0, 0%, 9%, 1);
+    --color-text-grey: hsla(0, 0%, 41%, 1);
+
+    /* Text-size styles */
+    /* base size: title---small (14px) */
+    --display---large: 4.07rem;
+    --display---medium: 3.21rem;
+    --display---small: 2.57rem;
+    --headline---large: 2.29rem;
+    --headline---medium: 2rem;
+    --headline---small: 1.71rem;
+    --title---large: 1.57rem;
+    --title---medium: 1.14rem;
+    --title---small: 1rem;
+    --label---large: 1rem;
+    --label---medium: 0.86rem;
+    --label---small: 0.79rem;
+    --body---large: 1.14rem;
+    --body---medium: 1rem;
+    --body---small: 0.86rem;
+
+
+}
+
+h1 {
+    font-size: var(--title---large);
+    color: hsl(0, 0%, 14%);
+    font-family: "Nokora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h3 {
+    font-size: var(--label---large);
+
+}
+
+
+
+p {
+    color: hsl(0, 0%, 14%);
+    font-family: "Nokora", sans-serif;
+    font-size: var(--title---medium);
+
+}

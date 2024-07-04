@@ -1,0 +1,13 @@
+/* Import other CSS files */
+@import url('reset.css');
+@import url('styles.css');
+@import url('typography.css');
+@import url('button.css');
+
+
+/* 
+body {
+    font-family: "Nokora", sans-serif;
+    background-color: var(--background-color);
+    color: var(--color-text-primary);
+} */

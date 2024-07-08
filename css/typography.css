@@ -27,6 +27,39 @@
 
 }
 
+.nokora-thin {
+    font-family: "Nokora", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .nokora-light {
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .nokora-regular {
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .nokora-bold {
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .nokora-black {
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+
+
+
 h1 {
     font-size: var(--title---large);
     color: hsl(0, 0%, 14%);

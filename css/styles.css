@@ -244,6 +244,7 @@ h3 {
     /* grid-column-start: 5;
     grid-column-end: 13; */
     background-image: url("/assets/images/abstract.jpeg");
+    filter: grayscale(100%);
     max-width: 100%;
     background-position: 0 0, 0 0;
     background-size: cover;
@@ -255,6 +256,7 @@ h3 {
     /* grid-column: 1 / 5;
     grid-row: 3 / 5; */
     background-image: url("/assets/images/abstract.jpeg");
+    filter: grayscale(100%);
     background-position: 0 0, 0 0;
     background-size: cover;
     
@@ -618,4 +620,14 @@ h3 {
       font-size: var(--title---large);
       font-weight: 300;
     } 
+}
+
+
+.hero-image {
+  background-image: url("/assets/images/abstract2.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  filter: grayscale(100%);
+  
 }

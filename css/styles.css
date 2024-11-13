@@ -154,6 +154,7 @@ h3 {
   background-position: center;
   background-size: cover;
   grid-area: profile-pic;
+  filter:grayscale();
 } 
 
 

@@ -64,6 +64,7 @@ body {
 
 .section-header {
     max-width: 80ch;
+    margin-bottom: 2rem;
 }
 
 .section-header p {
@@ -75,20 +76,31 @@ body {
 }
 
 .section p {
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--body---large);
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
     max-width: 80ch;
 }
 
 .section-image {
     width: 100%;
-    margin: 2rem 0;
-    max-height: 30rem;
+    /* max-height: 30rem; */
     overflow: hidden;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Typography Classes */
@@ -112,8 +124,8 @@ body {
 
 .image-grid-item {
     flex: 1;
-    max-height: 25rem;
     overflow: hidden;
+    height: 27rem;
 }
 
 .image-grid-item img {
@@ -125,7 +137,6 @@ body {
 .stacked-images {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
     margin: 2rem 0;
 }
 

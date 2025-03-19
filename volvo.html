@@ -13,6 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="node_modules/feather-icons/dist/feather.js"></script>
     <title>Volvo - Max Portfolio</title>
+    <style>
+        body {
+            background-color: var(--color-neutral-background);
+        }
+    </style>
 </head>
 
 <body>
@@ -38,8 +43,9 @@
             </div>
 
             <div class="project-header">
-                <h1 style="font-size: var(--display---large)">PPO (Volvo Cars software) </h1>
-                <p style="font-size: var(--title---medium)">A strategic MVP redesign of Volvo's internal work system for planning car
+                <div class="project-title">PPO (Volvo Cars) </div>
+                <p class="project-description">A strategic MVP redesign of Volvo's internal work system for
+                    planning car
                     manufacturing schedules. The project focused on transforming key aspects of a
                     complex legacy system into an intuitive, modern interface that aligns with
                     Volvo's design principles while improving efficiency for global production
@@ -47,27 +53,41 @@
             </div>
 
             <div class="hero-image shadow-default">
-                <img src="assets/images/volvo/hero.jpg" alt="Volvo Project Hero Image">
+                <img src="assets/images/volvo/Cover-Volvo.png" alt="Volvo Project Hero Image">
             </div>
 
             <div class="section">
                 <div class="section-header">
-                    <p class="nokora-light" style="font-size: var(--subheader)">Overview</p>
-                    <h1 style="font-size: var(--display---medium)">Project Context</h1>
+                    <div class="body-subheader">Intro</div>
+                    <h2>Challenge</h2>
                 </div>
-                <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>The existing manufacturing planning software, developed in the 1990s, presented a unique starting point. Two separate
+                    keyboard-only systems were in use - one for Gothenburg and another for Volvo's global plants. The complex legacy
+                    interface, with its steep learning curve and navigation challenges, needed a strategic approach for modernization.
+                </p>
+                <br>
+                <p>For the MVP phase, we focused on the most frequently used features, aiming to transform them into an intuitive
+                    interface (mouse-enabled, of course). A key challenge emerged in redesigning the user flow, as the original software
+                    lacked clear navigation structure and location indicators. This initial release establishes the foundation for
+                    future iterations, which will incorporate additional features based on user feedback and business priorities.</p>
             </div>
 
             <div class="divider"></div>
 
             <div class="section">
                 <div class="section-header">
-                    <p class="nokora-light" style="font-size: var(--subheader)">Process</p>
-                    <h1 style="font-size: var(--display---medium)">Design Approach</h1>
+                    <div class="body-subheader">Ways of working</div>
+                    <h2>Segment by segment</h2>
                 </div>
-                <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>One of the key approaches was breaking down the complex system into manageable
+                    segments, analysing each workflow's functionality by asking questions like
+                    "okay, so this is where you do X and Y. Does it connect to any other workflow
+                    further away in time or is this it?". This iterative approach allowed for
+                    focused improvements while maintaining system integrity and ensuring each
+                    redesigned segment met user requirements effectively.
+                </p>
                 <div class="section-image shadow-default">
-                    <img src="assets/images/volvo/process.jpg" alt="Volvo Design Process">
+                    <img src="assets/images/volvo/Sitemap.png" alt="Volvo Design Process">
                 </div>
             </div>
 
@@ -75,19 +95,25 @@
 
             <div class="section">
                 <div class="section-header">
-                    <p class="nokora-light" style="font-size: var(--subheader)">Solution</p>
-                    <h1 style="font-size: var(--display---medium)">Final Design</h1>
+                    <div class="body-subheader">Design System</div>
+                    <h2>Building with existing resources</h2>
                 </div>
-                <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>With no established design system for internal enterprise software at Volvo, we
+                    leveraged AG-Grid's enterprise data grid library as our foundation. This
+                    provided a robust framework for our table-heavy interface needs, while allowing
+                    us to apply Volvo's visual identity. The approach balanced efficiency with
+                    consistency, requiring only minimal custom component development while
+                    maintaining a cohesive Volvo look and feel.
+                </p>
                 <div class="image-grid">
                     <div class="image-grid-item shadow-default">
-                        <img src="assets/images/volvo/solution1.jpg" alt="Volvo Solution 1">
+                        <img src="assets/images/volvo/ds1.png" alt="Volvo Solution 1">
                     </div>
                     <div class="image-grid-item shadow-default">
-                        <img src="assets/images/volvo/solution2.jpg" alt="Volvo Solution 2">
+                        <img src="assets/images/volvo/ds2.png" alt="Volvo Solution 2">
                     </div>
                     <div class="image-grid-item shadow-default">
-                        <img src="assets/images/volvo/solution3.jpg" alt="Volvo Solution 3">
+                        <img src="assets/images/volvo/ds3.png" alt="Volvo Solution 3">
                     </div>
                 </div>
             </div>
@@ -96,28 +122,31 @@
 
             <div class="section">
                 <div class="section-header">
-                    <p class="nokora-light" style="font-size: var(--subheader)">Implementation</p>
-                    <h1 style="font-size: var(--display---medium)">Technical Details</h1>
+                    <div class="body-subheader">Design</div>
+                    <h2>Thoughtful modernization</h2>
                 </div>
-                <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>The new design improved usability and efficiency while maintaining familiar
+                    workflows. Key updates included streamlined navigation, enhanced data
+                    visualization, and consistent styling aligned with Volvo's brand identity. The
+                    result provides a fresh experience for existing users while ensuring intuitive
+                    onboarding for future team members.
+                </p>
 
                 <div class="stacked-images">
                     <div class="stacked-image-item">
                         <div class="stacked-image-text">
-                            <p class="nokora-light" style="font-size: var(--subheader)">Technical Implementation</p>
-                            <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="body-subheader">Before & After  (Before image pixelated for confidentiality)</div>
+                            <p>One example of modernizing a core feature: The data table transformation shows
+                                how improved styling, clearer hierarchy, and enhanced functionality make
+                                information more accessible while maintaining familiarity for existing users.Added pixelation for legal 
                         </div>
                         <div class="section-image shadow-default">
-                            <img src="assets/images/volvo/tech1.jpg" alt="Technical Implementation">
+                            <img src="assets/images/volvo/capacity orders old.png" alt="capacity orders old">
                         </div>
                     </div>
                     <div class="stacked-image-item">
-                        <div class="stacked-image-text">
-                            <p class="nokora-light" style="font-size: var(--subheader)">User Testing</p>
-                            <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
                         <div class="section-image shadow-default">
-                            <img src="assets/images/volvo/tech2.jpg" alt="User Testing">
+                            <img src="assets/images/volvo/capacity orders.png" alt="capacity orders new">
                         </div>
                     </div>
                 </div>
@@ -127,9 +156,67 @@
 
             <div class="section">
                 <div class="section-header">
-                    <p class="nokora-light" style="font-size: var(--subheader)">Outcome</p>
+                    <div class="body-subheader">Users</div>
+                    <h2>Small user group, direct dialogue</h2>
                 </div>
-                <p style="font-size: var(--body---large)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Since there aren't many users of the system, we had the advantage of direct
+                    communication and feedback loops with each individual user. This close
+                    relationship allowed us to quickly understand their needs and pain points,
+                    making the development process more focused and efficient. No need for deeper
+                    studies or extensive user research methods when working with a small, accessible
+                    user group.
+                </p>
+
+                <div class="stacked-images">
+                    <div class="stacked-image-item">
+                        <div class="stacked-image-text">
+                            <div class="body-subheader">Feedback - Most used features</div>
+                            <p>Through direct conversations with users about this information-heavy interface,
+                                we identified which elements they actually interacted with most frequently. This
+                                user insight helped guide our decluttering decisions, removing rarely-used
+                                features while preserving and enhancing essential functionality.</p>
+                        </div>
+                        <div class="section-image shadow-default">
+                            <img src="assets/images/volvo/most used.png" alt="capacity orders old">
+                        </div>
+                    </div>
+                    <div class="stacked-image-item">
+                        <div class="stacked-image-text">
+                            <p>Ideating based on feedback & dialogue</p>
+                        </div>
+                        <div class="section-image shadow-default">
+                            <img src="assets/images/volvo/order handling overview.png" alt="capacity orders new">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="body-subheader">Outcome</div>
+                </div>
+                <p style="font-size: var(--body---large)">The MVP successfully transformed a complex, keyboard-only legacy system into a
+                    modern, intuitive interface while preserving essential workflows. Through direct
+                    dialogue when needed with the small user group, we created a solution that not
+                    only improved efficiency but also set a new standard for internal software at
+                    Volvo. The redesigned system maintains the robustness required for global
+                    manufacturing planning while providing a more accessible and visually consistent
+                    experience that aligns with Volvo's quality standards. This foundation now
+                    serves as a stepping stone for future iterations and improvements based on
+                    continued user feedback.</p>
+            </div>
+
+            <div class="stacked-images">
+                <div class="stacked-image-item">
+                    <div class="section-image shadow-default">
+                        <img src="assets/images/volvo/new spread rule.png" alt="Project image 1">
+                    </div>
+                </div>
+                <div class="stacked-image-item">
+                    <div class="section-image shadow-default">
+                        <img src="assets/images/volvo/spread rule unlock.png" alt="Project image 2">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -148,4 +235,4 @@
     <script src="index.js"></script>
 </body>
 
-</html> 
+</html>

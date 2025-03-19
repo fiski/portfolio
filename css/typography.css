@@ -3,27 +3,28 @@
     --color-blue: hsla(223, 86%, 50%, 1);
     --color-ui-border: hsla(0, 0%, 88%, 1);
     --color-neutral-grey: hsla(0, 0%, 76%, 1);
+    --color-neutral-background : hsla(0, 0%, 98%, 1);
     --color-text-primary: hsla(0, 0%, 9%, 1);
     --color-text-grey: hsla(0, 0%, 41%, 1);
 
     /* Text-size styles */
     /* base size: title---small (14px) */
-    --display---large: 4.07rem;
-    --display---medium: 3.21rem;
-    --display---small: 2.57rem;
+    --display---large: 64px;
+    --display---medium: 48px;
+    --display---small: 36px;
     --headline---large: 2.29rem;
     --headline---medium: 2rem;
     --headline---small: 1.71rem;
-    --title---large: 1.57rem;
-    --title---medium: 1.14rem;
-    --title---small: 1rem;
-    --subheader: 1.29rem;
+    --title---large: 32px;
+    --title---medium: 24px;
+    --title---small: 20px;
+    --body--subheader: 18px;
     --label---large: 1rem;
     --label---medium: 0.86rem;
     --label---small: 0.79rem;
-    --body---large: 1.14rem;
-    --body---medium: 1rem;
-    --body---small: 0.86rem;
+    --body---large: 16px;
+    --body---medium: 14px;
+    --body---small: 12px;
 
 
 }
@@ -68,7 +69,34 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
 
+.project-title {
+    font-size: var(--display---large);
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    max-width: none;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 52px;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -83,4 +111,13 @@ p {
     font-family: "Nokora", sans-serif;
     font-size: var(--title---medium);
 
+}
+
+.body-subheader {
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: var(--body--subheader);
+    line-height: auto;
+    color: var(--color-text-primary);
 }

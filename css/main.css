@@ -11,3 +11,90 @@ body {
     background-color: var(--background-color);
     color: var(--color-text-primary);
 }
+
+/* Project Template Styles */
+.back-button {
+    margin-bottom: 2rem;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+}
+
+.back-button i {
+    width: 16px;
+    height: 16px;
+}
+
+.project-header {
+    max-width: 80ch;
+    margin-bottom: 3rem;
+}
+
+.project-header h1 {
+    margin-bottom: 1.5rem;
+}
+
+.hero-image {
+    width: 100%;
+    margin-bottom: 3rem;
+    max-height: 40.36rem;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-header {
+    max-width: 80ch;
+}
+
+.section-header p {
+    margin-bottom: 0.29rem;
+}
+
+.section-header h1 {
+    margin-bottom: 1.14rem;
+}
+
+.section p {
+    max-width: 80ch;
+}
+
+.section-image {
+    width: 100%;
+    margin: 2rem 0;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.section-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typography Classes */
+.display-large {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.title-medium {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+}

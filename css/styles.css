@@ -1,5 +1,3 @@
-
-
 .secondary {
   color: var(--color-text-grey);
   font-size: var(--title---small);
@@ -100,11 +98,10 @@ h3 {
 }
 
 .divider {
-  width: 100%; /* Gör dividern 100% av sin förälder */
-  max-width: 339px; /* Begränsar maxbredden till 339px */
-  height: 1px; /* Samma höjd som din SVG */
-  background-color: #DFDFDF; /* Samma färg som din SVG */
-  margin: 20px 0; /* Lägger till lite marginal för att separera den från andra element, justera efter behov */
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-ui-border);
+  margin: 4rem 0;
 }
   
   

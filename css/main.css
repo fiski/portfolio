@@ -138,3 +138,22 @@ body {
 .stacked-image-item p {
     max-width: 80ch;
 }
+
+.left-title.big a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.left-title.big a:hover {
+    opacity: 0.7;
+}
+
+.arrowBtn {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.arrowBtn:hover {
+    opacity: 0.7;
+}

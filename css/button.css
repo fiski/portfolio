@@ -6,13 +6,12 @@
     padding: 8px 24px;
     font-size: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     text-decoration: none;
 }
-
 
 .button .icon-left {
     margin-right: 8px;
@@ -37,8 +36,9 @@
     border: 2px solid #1451ED;
 }
 
-.text-button:active {
+.text-button.active {
     background-color: rgba(20, 81, 237, 0.15);
+    color: var(--color-primary);
 }
 
 .text-button:disabled {
@@ -51,7 +51,6 @@
 .bold-text {
     font-weight: bold;
 }
-
 
 /* Filled Button Styles */
 .filled-button {
@@ -105,4 +104,28 @@
     border-color: #A7A7A7;
     color: #A7A7A7;
     cursor: not-allowed;
+}
+
+/* Name Link Styles */
+.name-link {
+    font-family: 'Afacad', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    background-color: rgba(20, 81, 237, 0.12);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.name-link:hover {
+    background-color: rgba(20, 81, 237, 0.15);
+}
+
+.name-link:focus {
+    background-color: rgba(20, 81, 237, 0.15);
+    border: 2px solid #1451ED;
+}
+
+.name-link:active {
+    background-color: rgba(20, 81, 237, 0.2);
 }

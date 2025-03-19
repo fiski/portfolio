@@ -1,12 +1,3 @@
-.secondary {
-  color: var(--color-text-grey);
-  font-size: var(--title---small);
-  
-}
-
-
-
-
 h3 {
     color: hsl(0, 0%, 46%);
     font-family: "Nokora", sans-serif;
@@ -146,7 +137,7 @@ h3 {
 }
 
 .profile-pic {
-  background-image: url("/assets/images/abstract2.jpg");
+  background-image: url("/assets/images/max.jpg");
   border-radius: 0.75rem;
   background-position: center;
   background-size: cover;
@@ -237,16 +228,46 @@ h3 {
 }
 
 
+.featured-project-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 .featured-project {
     grid-area: project;
-    /* grid-column-start: 5;
-    grid-column-end: 13; */
-    background-image: url("/assets/images/abstract.jpeg");
-    filter: grayscale(100%);
+    background-image: url("/assets/images/Coop/coop\ insights\ cover.png");
     max-width: 100%;
-    background-position: 0 0, 0 0;
+    background-position: center;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
 
+.featured-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.featured-project:hover::before {
+    transform: scale(1.05);
+}
+
+.featured-project .titles {
+    position: relative;
+    z-index: 2;
 }
 
 .motto {

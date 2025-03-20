@@ -176,3 +176,7 @@ body {
     margin-bottom: 1rem;
     object-fit: cover;
 }
+
+.content-block.featured-project {
+    padding: 0;
+}

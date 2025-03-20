@@ -88,7 +88,7 @@ body {
     /* margin-bottom: 1.14rem; */
 }
 
-.section p {
+.body-text {
     font-family: 'Nokora';
     font-style: normal;
     font-weight: 400;
@@ -296,4 +296,216 @@ body {
 .bounce h2 {
     padding-left: 1rem;
     position: absolute;
+}
+
+/* Focus Areas Section */
+.focus-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.focus-areas-title {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-text-primary);
+}
+
+.focus-areas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+}
+
+.focus-area-item {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+}
+
+.focus-area-number {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    min-width: 19px;
+}
+
+.focus-area-text {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .focus-areas-grid {
+        gap: 32px;
+    }
+    
+    .focus-area-item {
+        gap: 16px;
+    }
+}
+
+/* Numbered List Section */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.numbered-list-title {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-text-primary);
+}
+
+.numbered-list-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+}
+
+.numbered-list-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+}
+
+.numbered-list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex: 1;
+}
+
+.numbered-list-number {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    min-width: 19px;
+}
+
+.numbered-list-text {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .numbered-list-grid {
+        gap: 32px;
+    }
+    
+    .numbered-list-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .numbered-list-item {
+        gap: 16px;
+    }
+}
+
+/* Quote Grid Section */
+.quote-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.quote-card {
+    flex: 1;
+    background: #F4F4F4;
+    border: 1px solid var(--color-ui-border);
+    border-radius: 8px;
+    padding: 32px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+}
+
+.quote-text {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.quote-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quote-title {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: var(--color-text-grey);
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .quote-grid {
+        gap: 16px;
+    }
+    
+    .quote-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .quote-card {
+        padding: 20px;
+    }
 }

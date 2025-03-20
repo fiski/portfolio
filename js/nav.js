@@ -3,7 +3,7 @@ function createNavigation(currentPage) {
     nav.className = 'top_nav';
     nav.innerHTML = `
         <div class="left">
-            <h1><a href="index.html" class="button name-link">Maximilian Relam Wide</a></h1>
+            <h1><a href="index.html" class="button name-link ${currentPage === 'index' ? 'active' : ''}">Maximilian Relam Wide</a></h1>
         </div>
 
         <div class="right">

@@ -137,12 +137,12 @@ h3 {
 }
 
 .profile-pic {
-  background-image: url("/assets/images/max.jpg");
+  background-image: url("../assets/images/max.jpg");
   border-radius: 0.75rem;
   background-position: center;
   background-size: cover;
   grid-area: profile-pic;
-  filter:grayscale();
+  filter: grayscale();
 } 
 
 
@@ -267,7 +267,7 @@ h3 {
   grid-area: motto;
     /* grid-column: 1 / 5;
     grid-row: 3 / 5; */
-    background-image: url("/assets/images/abstract.jpeg");
+    background-image: url("../assets/images/abstract.jpeg");
     filter: grayscale(100%);
     background-position: 0 0, 0 0;
     background-size: cover;
@@ -492,9 +492,7 @@ h3 {
 
 @media (max-width: 991px) {
 
-  .container {
-    /* background-color: blue; */
-  }
+
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -559,9 +557,7 @@ h3 {
     background-position: center;
   }
 
-  .container {
-    /* background-color:blueviolet */
-  }
+
 
 
   .grid {
@@ -636,7 +632,7 @@ h3 {
 
 
 .hero-image {
-  background-image: url("/assets/images/abstract2.jpg");
+  background-image: url("../assets/images/abstract2.jpg");
   background-position: center;
   background-size: cover;
   min-height: 500px;

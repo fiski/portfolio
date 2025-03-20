@@ -36,7 +36,7 @@
     <div class="section">
         <div class="container">
             <div class="back-button">
-                <a href="#" onclick="history.back(); return false;">
+                <a href="#" onclick="history.back(); return false;" class="arrowBtn">
                     <i class="feather-16" data-feather="arrow-left"></i>
                     Back to previous screen
                 </a>
@@ -191,6 +191,8 @@
                 </div>
             </div>
 
+            <div class="divider"></div>
+
             <div class="section">
                 <div class="section-header">
                     <div class="body-subheader">Outcome</div>
@@ -234,6 +236,9 @@
 
     <script src="index.js"></script>
     <script src="js/git-info.js"></script>
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>

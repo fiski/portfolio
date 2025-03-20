@@ -643,10 +643,10 @@ h3 {
 
 
 .hero-image {
-  background-image: url("../assets/images/abstract2.jpg");
+  /* background-image: url("../assets/images/abstract2.jpg"); */
   background-position: center;
   background-size: cover;
-  min-height: 500px;
+  /* min-height: 500px; */
   /* filter: grayscale(100%); */
   
 }

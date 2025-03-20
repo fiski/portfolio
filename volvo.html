@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nokora:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <script src="node_modules/feather-icons/dist/feather.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Volvo - Max Portfolio</title>
     <style>
         body {
@@ -237,7 +237,9 @@
     <script src="index.js"></script>
     <script src="js/git-info.js"></script>
     <script>
-        feather.replace();
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+        });
     </script>
 </body>
 

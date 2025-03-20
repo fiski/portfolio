@@ -21,21 +21,9 @@
 </head>
 
 <body>
-    <div class="top_nav">
-        <div class="left">
-            <h1><a href="index.html">Maximilian Relam Wide</a></h1>
-        </div>
-
-        <div class="right">
-            <a href="work.html" class="button text-button active">Work</a>
-            <a href="about.html" class="button text-button">About</a>
-            <a href="contact.html" class="button text-button">Contact</a>
-        </div>
-    </div>
-
     <div class="section">
         <div class="container">
-            <div class="grid">
+            <div class="grid grid-work">
                 <div class="content-block">
                     <div class="card-title">
                         My Work
@@ -61,6 +49,14 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Then load our custom JavaScript -->
     <script src="js/index.js"></script>
+    <script src="js/git-info.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+            initNavigation('work');
+        });
+    </script>
 </body>
 
 </html> 

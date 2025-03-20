@@ -291,3 +291,9 @@ body {
         font-size: var(--body---medium);
     }
 }
+
+
+.bounce h2 {
+    padding-left: 1rem;
+    position: absolute;
+}

@@ -461,17 +461,26 @@ h3 {
 }
 
 .arrowBtn {
-  padding: 0.5rem 1rem;
-  align-items: center;
-  border-radius: 0.75rem;
-  border: 1px solid var(--neutral-grey, #C2C2C2);
-  background-color: white;
-  color: var(--color-text-primary);
-
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.75rem;
+    border: 1px solid var(--neutral-grey, #C2C2C2);
+    background-color: white;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.arrowBtn:hover{
-  background-color: var(--color-ui-border);
+.arrowBtn:hover {
+    background-color: var(--color-ui-border);
+}
+
+.arrowBtn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feather-16{

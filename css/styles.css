@@ -361,23 +361,25 @@ h3 {
 
 .card-title {
     background-color: var(--color-neutral-grey);
-    padding: 0.375rem 0.75rem;
+    padding: 0.5rem 1rem;
     border-radius: 16px;
-    line-height: 1.25rem;
+    line-height: 1;
     text-align: center;
     width: fit-content;
     font-family: "Nokora", sans-serif;
     font-size: var(--label---large);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.75rem;
 
     &.second {
-      background-color: var(--color-ui-border);
+        background-color: var(--color-ui-border);
     }
 
     &.inverted {
-      background-color: white;
+        background-color: white;
     }
-
-
 }
 
 

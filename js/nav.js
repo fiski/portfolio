@@ -3,7 +3,7 @@ function createNavigation(currentPage) {
     nav.className = 'top_nav';
     nav.innerHTML = `
         <div class="left">
-            <h1><a href="index.html" class="button name-link ${currentPage === 'index' ? 'active' : ''}">Maximilian Relam Wide</a></h1>
+            <h1><a href="home.html" class="button name-link ${currentPage === 'home' ? 'active' : ''}">Maximilian Relam Wide</a></h1>
         </div>
 
         <div class="right">
@@ -18,6 +18,47 @@ function createNavigation(currentPage) {
 // Function to initialize navigation
 function initNavigation(currentPage) {
     const body = document.body;
+    
+    // Create and insert navigation
     const nav = createNavigation(currentPage);
     body.insertBefore(nav, body.firstChild);
+
+    // Remove all existing background classes
+    body.classList.remove('home-bg', 'work-bg', 'about-bg', 'contact-bg');
+
+    // Add the appropriate background class based on the current page
+    switch (currentPage) {
+        case 'home':
+            body.classList.add('home-bg');
+            break;
+        case 'work':
+            body.classList.add('work-bg');
+            break;
+        case 'about':
+            body.classList.add('about-bg');
+            break;
+        case 'contact':
+            body.classList.add('contact-bg');
+            break;
+    }
+
+    // Update navigation items
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        const link = item.querySelector('a');
+        if (link) {
+            const href = link.getAttribute('href');
+            if (href === 'home.html' && currentPage === 'home') {
+                item.classList.add('active');
+            } else if (href === 'work.html' && currentPage === 'work') {
+                item.classList.add('active');
+            } else if (href === 'about.html' && currentPage === 'about') {
+                item.classList.add('active');
+            } else if (href === 'contact.html' && currentPage === 'contact') {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        }
+    });
 } 

@@ -8,11 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // After footer is loaded, fetch last commit info
             fetch('https://api.github.com/repos/fiski/portfolio/commits', {
                 headers: {
-                    'Accept': 'application/vnd.github.v3+json'
+                    'Accept': 'application/vnd.github.v3+json',
+                    'User-Agent': 'Mozilla/5.0' // Add User-Agent header to avoid 403
                 }
             })
             .then(response => {
                 if (!response.ok) {
+                    if (response.status === 403) {
+                        throw new Error('GitHub API rate limit exceeded');
+                    }
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
@@ -37,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Error fetching commit info:', error);
-                document.getElementById('last-commit').textContent = 'Last updated: Unable to fetch';
+                // Use a more user-friendly message
+                document.getElementById('last-commit').textContent = 'Last updated: Check GitHub for latest changes';
             });
         })
         .catch(error => {

@@ -11,12 +11,13 @@ function createNavigation(currentPage) {
             <!---  <a href="contact.html" class="button text-button ${currentPage === 'contact' ? 'active' : ''}">Contact</a> -->
         </div>
     `;
-    document.body.insertBefore(nav, document.body.firstChild);
+    return nav;
 }
 
 // Function to initialize navigation
 function initNavigation(currentPage) {
     const body = document.body;
+    console.log("initNavigation körs med sidan:", currentPage); // Debug
     
     // Create and insert navigation
     const nav = createNavigation(currentPage);
@@ -41,8 +42,6 @@ function initNavigation(currentPage) {
             break;
     }
 
-
-
     // Update navigation items
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
@@ -63,3 +62,4 @@ function initNavigation(currentPage) {
         }
     });
 } 
+

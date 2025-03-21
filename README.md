@@ -7,4 +7,4 @@ Learning to code by doing it myself
 
 [Figma](https://www.figma.com/design/rY0r4vuakSEHOKBxj2byUt/Portfolio?node-id=146-342&t=NvU05l7C972ivao6-1)
 
-[Github pages](https://fiski.github.io/portfolio/)
+[Github pages](https://fiski.github.io/portfolio/home.html)

@@ -6,8 +6,7 @@ h3 {
     font-style: normal;
 }
 
-.top_nav {
-    /* background-color: rgb(188, 188, 188); */
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;

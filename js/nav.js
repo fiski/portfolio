@@ -1,18 +1,17 @@
 function createNavigation(currentPage) {
-    const nav = document.createElement('div');
-    nav.className = 'top_nav';
+    const nav = document.createElement('nav');
+    nav.className = 'nav';
     nav.innerHTML = `
-        <div class="left">
-            <h1><a href="home.html" class="button name-link ${currentPage === 'home' ? 'active' : ''}">Maximilian Relam Wide</a></h1>
+        <div class="nav-left">
+            <a href="home.html" class="button text-button ${currentPage === 'home' ? 'active' : ''}">Maximilian Relam Wide</a>
         </div>
-
-        <div class="right">
+        <div class="nav-right">
             <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>
             <a href="about.html" class="button text-button ${currentPage === 'about' ? 'active' : ''}">About</a>
-            <a href="contact.html" class="button text-button ${currentPage === 'contact' ? 'active' : ''}">Contact</a>
+            <!---  <a href="contact.html" class="button text-button ${currentPage === 'contact' ? 'active' : ''}">Contact</a> -->
         </div>
     `;
-    return nav;
+    document.body.insertBefore(nav, document.body.firstChild);
 }
 
 // Function to initialize navigation
@@ -41,6 +40,8 @@ function initNavigation(currentPage) {
             body.classList.add('contact-bg');
             break;
     }
+
+
 
     // Update navigation items
     const navItems = document.querySelectorAll('.nav-item');

@@ -14,142 +14,63 @@
 
 
     
-    <title>About</title>
+    <title>Project - Maximilian Relam Wide</title>
     </head>
 
 <body>
-
-    <div class="top_nav">
-        <div class="left">
-            <h1>Maximilian Relam Wide</h1>
+    <div class="container">
+        <div class="back-button">
+            <a href="work.html">
+                <i data-feather="arrow-left"></i>
+                Back to Work
+            </a>
         </div>
 
-        <div class="right">
-            <h3>Work</h3>
-            <h3>About</h3>
-            <h3>Contact</h3>
+        <div class="project-header">
+            <h1 class="project-title">Project Title</h1>
+            <p class="project-description">Project description goes here. This is a brief overview of the project and its goals.</p>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="container-smaller">
-    
-            <div class="hero">
-                <a href="#" target="_blank">
-                    <button class="button text-button bold-text">Home</button>
-                </a>
-            
-                <h1>Coop Insights</h1>
-                <p>Coop Insights is a self service platform for Coop Sverige AB's b2b clients where they can follow their
-                    sales in real
-                    time and get unique customer insights</p>
-            
-                <div class="hero-image">
-            
+        <div class="hero-image">
+            <img src="assets/images/placeholder.png" alt="Project Hero Image">
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h1>Section Title</h1>
+                <p class="body-text">Section description goes here. This provides more context about the section and its content.</p>
+            </div>
+            <div class="section-image">
+                <img src="assets/images/placeholder.png" alt="Section Image">
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-header">
+                <h1>Another Section</h1>
+                <p class="body-text">Another section description. This section might contain different types of content or a different layout.</p>
+            </div>
+            <div class="image-grid">
+                <div class="image-grid-item">
+                    <img src="assets/images/placeholder.png" alt="Grid Image 1">
+                </div>
+                <div class="image-grid-item">
+                    <img src="assets/images/placeholder.png" alt="Grid Image 2">
                 </div>
             </div>
-
-            <div class="section-intro">
-                <p>Solution</p>
-                <h2>A highly curated experience</h2>
-                <p>Coop Insights makes the process of tracking sales, noticing trends and taking action simple and engaging. It helps
-                    the admins workflow with writing articles, sending out information and engaging with the customers.</p>
-            </div>
-    
-            <div class="section-intro">
-                <p>Solution</p>
-                <h2>A highly curated experience</h2>
-            </div>
-
-            <div class="role-list">
-                <div class="row">
-                    <div class="role">
-                        <div class="card-title">
-                            Role title
-                        </div>
-                        <p>As the [role], I was responsible for overseeing [task 1] and [task 2]. My focus was on ensuring that [key aspect]
-                            aligned with the overall project goals, while also collaborating closely with [team or stakeholders] to deliver a
-                            seamless and intuitive solution</p>
-                    </div>
-                    <div class="role">
-                        <div class="card-title">
-                            Role title
-                        </div>
-                        <p>As the [role], I was responsible for overseeing [task 1] and [task 2]. My focus was on ensuring that [key aspect]
-                            aligned with the overall project goals, while also collaborating closely with [team or stakeholders] to deliver a
-                            seamless and intuitive solution</p>
-                    </div>
-                    <div class="role">
-                        <div class="card-title">
-                            Role title
-                        </div>
-                        <p>As the [role], I was responsible for overseeing [task 1] and [task 2]. My focus was on ensuring that [key aspect]
-                            aligned with the overall project goals, while also collaborating closely with [team or stakeholders] to deliver a
-                            seamless and intuitive solution</p>
-                    </div>
-                    <div class="role">
-                        <div class="card-title">
-                            Role title
-                        </div>
-                        <p>As the [role], I was responsible for overseeing [task 1] and [task 2]. My focus was on ensuring that [key aspect]
-                            aligned with the overall project goals, while also collaborating closely with [team or stakeholders] to deliver a
-                            seamless and intuitive solution</p>
-                    </div>
-                    <div class="role">
-                        <div class="card-title">
-                            Role title
-                        </div>
-                        <p>As the [role], I was responsible for overseeing [task 1] and [task 2]. My focus was on ensuring that [key aspect]
-                            aligned with the overall project goals, while also collaborating closely with [team or stakeholders] to deliver a
-                            seamless and intuitive solution</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <project-section>
-                <div class="section-intro">
-                    <p>Key Deliverable</p>
-                    <h2>Wireframes</h2>
-                    <p>Over the course of several rounds of review and iteration, I refined an approach to the website gathering input
-                        from
-                        stakeholders and developers along the way. I designed the UI for desktop, tablet and smartphone breakpoints. Key
-                        interactions were designed and prototyped as a spec for the development team as well as a tool to evaluate
-                        usability
-                        during the usability study.
-                    </p>
-                </div>
-                <div class="image-gallery">
-                    <div class="image"></div>
-                    <div class="image"></div>
-                    <div class="image"></div>
-                </div>
-            </project-section>
-
-    
-    
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<body>
-    
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+            initNavigation('work');
+        });
+    </script>
 </body>
 </html>

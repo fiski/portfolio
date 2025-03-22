@@ -145,6 +145,13 @@ h3 {
     font-style: normal;
 }
 
+@media (max-width: 768px) {
+    .bio-text {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+}
+
 /* Secondary Text */
 .secondary {
     color: var(--color-text-grey);

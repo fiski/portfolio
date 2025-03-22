@@ -110,8 +110,11 @@ h3 {
   grid-area: bio;
   display: flex;
   flex-direction: column;
+}
 
-
+.bio-text {
+  font-size: var(--body---large);
+  line-height: 1.6;
 }
 
 .intro h2 {
@@ -625,13 +628,11 @@ h3 {
       'profile-pic';
     word-break: break-word;
     gap: 2rem;
-    
   }
 
   .short-text {
     flex-direction: column;
     gap: 1rem;
-
   }
 
   .profile-pic {
@@ -674,6 +675,12 @@ h3 {
     width: 100%;
     justify-content: center;
   }
+
+  .bio-text {
+    font-size: var(--body---small);
+    line-height: 1.5;
+  }
+
 }
 
 .wrapper {
@@ -693,5 +700,6 @@ h3 {
   background-size: cover;
   /* min-height: 500px; */
   /* filter: grayscale(100%); */
-  
+
+
 }

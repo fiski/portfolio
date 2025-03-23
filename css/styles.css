@@ -308,29 +308,38 @@ h3 {
   width: 100%;
   overflow: hidden;
   position: relative;
-  display: flex;
-  white-space: nowrap;
 }
 
 .client-logo-track {
   display: flex;
-  width: calc(12 * (185px + 2rem)); /* 12 images * (width + margin) */
+  width: calc(12 * (185px + 4rem)); /* 12 logos * (width + total padding) */
   animation: scroll 30s linear infinite;
 }
 
 .client-logo-track img {
   width: 185px;
   height: 88px;
-  margin: 0 2rem;
+  padding: 0 2rem;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 @keyframes scroll {
-  from {
-      transform: translateX(0);
+  0% {
+    transform: translateX(0);
   }
-  to {
-      transform: translateX(calc(-6 * (185px + 4rem))); /* Move exactly one full set */
+  100% {
+    transform: translateX(calc(-6 * (185px + 4rem))); /* Move by half the width (6 logos) */
+  }
+}
+
+@media (max-width: 768px) {
+  .client-logo-track {
+    animation-duration: 40s; /* Slower animation on mobile */
+  }
+  
+  .client-logo-track img {
+    padding: 0 1rem;
   }
 }
 

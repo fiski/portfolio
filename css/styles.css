@@ -756,3 +756,81 @@ h3 {
 
 
 }
+
+.outcomes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+}
+
+.outcomes-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+.outcomes-title {
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: #161616;
+}
+
+.outcomes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+}
+
+.outcomes-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+}
+
+.outcome-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1;
+}
+
+.outcome-number {
+    font-family: 'Nokora';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #161616;
+    width: 19px;
+}
+
+.outcome-text {
+    font-family: 'Nokora';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #161616;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .outcomes-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .outcome-item {
+        width: 100%;
+    }
+}

@@ -761,7 +761,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -769,30 +769,30 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 0.5rem;
     width: 100%;
 }
 
 .outcomes-title {
-    font-family: 'Nokora';
+    font-family: "Nokora", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    color: #161616;
+    font-size: var(--body---large);
+    line-height: 1.5;
+    color: var(--color-text-primary);
 }
 
 .outcomes-grid {
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 2.75rem;
     width: 100%;
 }
 
 .outcomes-row {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -800,37 +800,41 @@ h3 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 24px;
+    gap: 1.5rem;
     flex: 1;
 }
 
 .outcome-number {
-    font-family: 'Nokora';
+    font-family: "Nokora", sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    color: #161616;
-    width: 19px;
+    font-size: var(--body---large);
+    line-height: 1.5;
+    letter-spacing: 0.031rem;
+    color: var(--color-text-primary);
+    width: 1.188rem;
 }
 
 .outcome-text {
-    font-family: 'Nokora';
+    font-family: "Nokora", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    color: #161616;
+    font-size: var(--body---large);
+    line-height: 1.5;
+    letter-spacing: 0.031rem;
+    color: var(--color-text-primary);
     flex: 1;
 }
 
 @media (max-width: 768px) {
     .outcomes-row {
         flex-direction: column;
-        gap: 24px;
+        gap: 2rem;
     }
 
     .outcome-item {
         width: 100%;
+    }
+
+    .outcomes-grid {
+        gap: 2rem;
     }
 }

@@ -3,7 +3,12 @@ function createNavigation(currentPage) {
     nav.className = 'nav';
     nav.innerHTML = `
         <div class="nav-left">
+            <a href="home.html" class="button text-button ${currentPage === 'home' ? 'active' : ''}">
+                <img src="assets/images/Maximilian-relam-wide.svg" alt="Maximilian Relam Wide" class="logo">
+            </a>
+            <!-- Old text version
             <a href="home.html" class="button text-button ${currentPage === 'home' ? 'active' : ''}">Maximilian Relam Wide</a>
+            -->
         </div>
         <div class="nav-right">
             <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>

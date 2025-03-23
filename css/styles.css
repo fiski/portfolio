@@ -335,11 +335,42 @@ h3 {
 
 @media (max-width: 768px) {
   .client-logo-track {
-    animation-duration: 40s; /* Slower animation on mobile */
+    animation-duration: 40s;
+    width: calc(12 * (185px + 2rem)); /* Reduce padding space on mobile */
   }
   
   .client-logo-track img {
     padding: 0 1rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-6 * (185px + 2rem))); /* Match the reduced padding */
+    }
+  }
+}
+
+@media (max-width: 463px) {
+  .client-logo-track {
+    width: calc(12 * (140px + 1.5rem)); /* Smaller logos and padding for very small screens */
+  }
+  
+  .client-logo-track img {
+    width: 140px;
+    height: 66px; /* Maintain aspect ratio */
+    padding: 0 0.75rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-6 * (140px + 1.5rem))); /* Match the smaller dimensions */
+    }
   }
 }
 

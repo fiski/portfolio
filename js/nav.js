@@ -13,7 +13,7 @@ function createNavigation(currentPage) {
         <div class="nav-right">
             <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>
             <a href="about.html" class="button text-button ${currentPage === 'about' ? 'active' : ''}">About</a>
-            <!---  <a href="contact.html" class="button text-button ${currentPage === 'contact' ? 'active' : ''}">Contact</a> -->
+            <a href="resume.html" class="button text-button ${currentPage === 'resume' ? 'active' : ''}">Resume</a>
         </div>
     `;
     return nav;

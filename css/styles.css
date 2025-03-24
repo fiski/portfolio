@@ -287,10 +287,12 @@ h3 {
   grid-area: motto;
     /* grid-column: 1 / 5;
     grid-row: 3 / 5; */
-    background-image: url("../assets/images/abstract.jpeg");
+    background-image: url("../assets/images/motto-ver1.png");
+    /* background-image: url("../assets/images/abstract.jpeg"); */
     filter: grayscale(100%);
-    background-position: 0 0, 0 0;
-    background-size: cover;
+    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
     
     p {
       font-size: var(--headline---small);

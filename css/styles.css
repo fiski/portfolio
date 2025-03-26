@@ -1107,7 +1107,7 @@ h3 {
     box-sizing: border-box;
 }
 
-.contact-label, .contact-value {
+/* .contact-label, .contact-value {
   font-family: 'Prompt', sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -1117,7 +1117,7 @@ h3 {
   word-break: break-word;
   overflow-wrap: break-word;
   text-decoration: none!important;
-}
+} */
 
 @media (max-width: 768px) {
     .contact-info {

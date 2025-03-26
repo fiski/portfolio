@@ -464,7 +464,7 @@ h3 {
   width: 100%;
   word-break: break-word;
   overflow-wrap: break-word;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 .links {
@@ -1116,7 +1116,7 @@ h3 {
   width: 100%;
   word-break: break-word;
   overflow-wrap: break-word;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 @media (max-width: 768px) {

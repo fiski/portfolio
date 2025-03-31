@@ -393,7 +393,7 @@ h3 {
 
 .contact {
   grid-area: contact;
-  background-color: var(--color-neutral-grey);
+  /* background-color: var(--color-neutral-grey); */
     /* grid-column: 8 / 13; */
 
 }
@@ -409,7 +409,7 @@ h3 {
 
 .contact-title {
   font-family: 'Prompt', sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 1.5rem;
   line-height: 2.25rem;
   color: var(--color-text-grey);
@@ -493,7 +493,7 @@ h3 {
 .card-title {
     background-color: var(--color-neutral-grey);
     padding: 0.5rem 1rem;
-    border-radius: 16px;
+    border-radius: 0.4rem;
     line-height: 1;
     text-align: center;
     width: fit-content;
@@ -917,7 +917,7 @@ h3 {
 
 .work-title {
     font-family: 'Prompt', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.5rem;
     line-height: 2.25rem;
     color: var(--color-text-grey);
@@ -1001,7 +1001,7 @@ h3 {
 
 .education-title {
     font-family: 'Prompt', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.5rem;
     line-height: 2.25rem;
     color: var(--color-text-grey);

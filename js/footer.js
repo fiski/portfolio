@@ -25,16 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data && data[0]) {
                     const lastCommit = data[0];
                     const date = new Date(lastCommit.commit.author.date);
-                    const formattedDate = date.toLocaleDateString('en-US', {
+                    const formattedDate = date.toLocaleDateString('sv-SE', {
                         year: 'numeric',
                         month: 'short',
+                        day: 'numeric',
                         hour: '2-digit',
                         minute: '2-digit',
                         hour12: false,
-                        timeZoneName: 'short',
-                        day: 'numeric'
+                        timeZone: 'Europe/Stockholm'
                     });
-                    document.getElementById('last-commit').textContent = `Last updated: ${formattedDate}`;
+                    document.getElementById('last-commit').textContent = `Last updated: ${formattedDate} CET`;
                 } else {
                     throw new Error('No commit data available');
                 }

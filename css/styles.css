@@ -1148,3 +1148,18 @@ h3 {
   align-items: flex-start;
   padding-top: 2rem;
 }
+
+/* Default Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}

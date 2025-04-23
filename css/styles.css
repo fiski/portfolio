@@ -491,7 +491,8 @@ h3 {
 }
 
 .card-title {
-    background-color: var(--color-neutral-grey);
+    background-color: #3f3c3c;
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
     line-height: 1;
@@ -505,11 +506,12 @@ h3 {
     min-height: 1.75rem;
 
     &.second {
-        background-color: var(--color-ui-border);
+        background-color: #818181;
     }
 
     &.inverted {
         background-color: white;
+      
     }
 }
 

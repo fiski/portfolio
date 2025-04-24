@@ -25,7 +25,7 @@
 .text-button {
     background-color: transparent;
     color: var(--color-text-primary);
-    
+
 }
 
 .text-button:hover {
@@ -34,7 +34,8 @@
 
 .text-button:focus {
     background-color: rgba(20, 81, 237, 0.08);
-    border: 2px solid #1451ED;
+    box-shadow: 0 0 0 2px #1451ED;
+    outline: none;
 }
 
 .text-button.active {

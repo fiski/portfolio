@@ -249,7 +249,7 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 991px) {
-    .container {
+    .container, .container-work {
         padding: 0 2rem;
     }
 
@@ -285,7 +285,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container {
+    .container, .container-work {
         padding: 0 1rem;
     }
 

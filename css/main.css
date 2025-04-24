@@ -285,6 +285,28 @@ body {
 }
 
 @media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-right {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .button.text-button {
+        padding: 0.5rem 1rem;
+    }
+
     .container, .container-work {
         padding: 0 1rem;
     }
@@ -586,4 +608,29 @@ body {
         top: 1.5rem;
         left: 1.5rem;
     } */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }

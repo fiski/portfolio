@@ -45,6 +45,19 @@ h3 {
     padding-bottom: 1rem;
 }
 
+.container-work {
+    /* background-color: bisque;
+    border: 1px solid #000; */
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14.5rem;
+    padding-right: 14.5rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .container-smaller {
     /* background-color: bisque;
     border: 1px solid #000; */

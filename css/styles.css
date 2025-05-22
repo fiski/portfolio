@@ -161,12 +161,12 @@ h3 {
 }
 
 .profile-pic {
-  background-image: url("../assets/images/max.jpg");
+  background-image: url("../assets/images/max.png");
   border-radius: 0.75rem;
   background-position: center;
   background-size: cover;
   grid-area: profile-pic;
-  filter: grayscale();
+  /* filter: grayscale(); */
 } 
 
 

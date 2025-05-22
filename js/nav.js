@@ -3,11 +3,11 @@ function createNavigation(currentPage) {
     nav.className = 'nav';
     nav.innerHTML = `
         <div class="nav-left">
-            <a href="home.html" class="button text-button ${currentPage === 'home' ? 'active' : ''}">
+            <a href="index.html" class="button text-button ${currentPage === 'index' ? 'active' : ''}">
                 <img src="assets/images/Maximilian-relam-wide.svg" alt="Maximilian Relam Wide" class="logo">
             </a>
             <!-- Old text version
-            <a href="home.html" class="button text-button ${currentPage === 'home' ? 'active' : ''}">Maximilian Relam Wide</a>
+            <a href="index.html" class="button text-button ${currentPage === 'index' ? 'active' : ''}">Maximilian Relam Wide</a>
             -->
         </div>
         <div class="nav-right">
@@ -29,12 +29,12 @@ function initNavigation(currentPage) {
     body.insertBefore(nav, body.firstChild);
 
     // Remove all existing background classes
-    body.classList.remove('home-bg', 'work-bg', 'about-bg', 'contact-bg');
+    body.classList.remove('index-bg', 'work-bg', 'about-bg', 'contact-bg');
 
     // Add the appropriate background class based on the current page
     switch (currentPage) {
-        case 'home':
-            body.classList.add('home-bg');
+        case 'index':
+            body.classList.add('index-bg');
             break;
         case 'work':
             body.classList.add('work-bg');
@@ -53,7 +53,7 @@ function initNavigation(currentPage) {
         const link = item.querySelector('a');
         if (link) {
             const href = link.getAttribute('href');
-            if (href === 'home.html' && currentPage === 'home') {
+            if (href === 'index.html' && currentPage === 'index') {
                 item.classList.add('active');
             } else if (href === 'work.html' && currentPage === 'work') {
                 item.classList.add('active');

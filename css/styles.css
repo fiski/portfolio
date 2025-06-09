@@ -41,7 +41,7 @@ h3 {
     padding-left: 3rem;
     padding-right: 3rem;
     height: auto;
-    padding-top: 1rem;
+
     padding-bottom: 1rem;
 }
 
@@ -508,7 +508,6 @@ h3 {
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
-    line-height: 1;
     text-align: center;
     width: fit-content;
     font-family: "Nokora", sans-serif;

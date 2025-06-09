@@ -682,3 +682,9 @@ body {
     color: var(--color-text-primary);
     margin-bottom: 0.5rem;
 }
+
+.nav .button.text-button {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

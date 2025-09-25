@@ -32,6 +32,10 @@
 }
 
 /* Font Family Classes */
+
+
+
+
 .nokora-thin {
     font-family: "Nokora", sans-serif;
     font-weight: 100;
@@ -83,6 +87,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-base);
+    color: var(--color-text-primary);
 }
 
 

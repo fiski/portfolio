@@ -214,6 +214,28 @@ h3 {
 }
 
 
+
+.extension-grid {  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.2fr;
+  grid-template-rows: 1fr 0.8fr 1fr;
+  gap: 2em 2em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "auctionet auctionet-img auctionet-img"
+    "tradera-vinted tradera-vinted-img tradera-vinted-img"
+    ". . .";
+}
+
+.auctionet { grid-area: auctionet; }
+
+.auctionet-img { grid-area: auctionet-img; }
+
+.tradera-vinted { grid-area: tradera-vinted; }
+
+.tradera-vinted-img { grid-area: tradera-vinted-img; }
+
+
+
 .content-block {
     background-color: rgb(210, 210, 210);
     background-color: white;
@@ -227,6 +249,10 @@ h3 {
     border-radius: 0.5rem;
     box-shadow: 2px 2px 21.6px 3px rgba(93, 93, 93, 0.12);
     min-height: 300px;
+}
+
+.extension {
+  gap: 2rem;
 }
 
 .about {
@@ -584,11 +610,17 @@ h3 {
 }
 
 .small {
+  
   p {
     font-size: var(--label---small);
     color: var(--color-text-grey);
+    
   }
 
+}
+
+.list-item.small.paragraph {
+  gap: 1rem;
 }
 
 .list-item:last-child {
@@ -752,6 +784,19 @@ h3 {
       'bio'
       'profile-pic';
     word-break: break-word;
+    gap: 2rem;
+  }
+
+
+  .extension-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+
+      'auctionet'
+      'auctionet-img'
+      'tradera-vinted'
+      'tradera-vinted-img';
     gap: 2rem;
   }
 

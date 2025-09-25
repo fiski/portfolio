@@ -1,0 +1,8 @@
+# Normalisera radslut för alla textfiler till LF i repot
+* text=auto eol=lf
+# Se till att vissa filtyper alltid använder LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.svg text eol=lf
+*.mdc text eol=lf

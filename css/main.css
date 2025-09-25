@@ -4,8 +4,6 @@
 @import url('typography.css');
 @import url('button.css');
 
-
-
 body {
     font-family: "Nokora", sans-serif;
     background-color: var(--background-color);
@@ -700,4 +698,29 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* Ny media query för breakpoint vid 465px */
+@media (max-width: 465px) {
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        
+    }
+
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    }
+
+    .nav-right .button.text-button {
+        flex-basis: calc(50% - 2.5rem);
+        text-align: center;
+        padding: 0.5rem;
+
 }

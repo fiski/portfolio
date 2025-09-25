@@ -1,0 +1,314 @@
+:root {
+    /* Color styles */
+    --color-blue: hsla(223, 86%, 50%, 1);
+    --color-ui-border: hsla(0, 0%, 88%, 1);
+    --color-neutral-grey: hsla(0, 0%, 76%, 1);
+    --color-neutral-background: hsla(0, 0%, 98%, 1);
+    --color-text-primary: hsla(0, 0%, 9%, 1);
+    --color-text-grey: hsla(0, 0%, 41%, 1);
+
+    /* Typography Scale */
+    /* Base size: 16px (1rem) */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 2rem;      /* 32px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+    --font-size-5xl: 3rem;      /* 48px */
+    --font-size-6xl: 4rem;      /* 64px */
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+
+    /* Letter Spacing */
+    --letter-spacing: 0.05em;    /* Default letter spacing */
+    --letter-spacing-tight: -0.02em;  /* For headings */
+}
+
+/* Font Family Classes */
+.nokora-thin {
+    font-family: "Nokora", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nokora-light {
+    font-family: "Nokora", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nokora-regular {
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nokora-bold {
+    font-family: "Nokora", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nokora-black {
+    font-family: "Nokora", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: var(--font-size-6xl);
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 52px;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: var(--font-size-base);
+}
+
+
+/* Prompt Font Family */
+
+.prompt-thin {
+    font-family: "Prompt", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .prompt-extralight {
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .prompt-light {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .prompt-regular {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .prompt-medium {
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .prompt-semibold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .prompt-bold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .prompt-extrabold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .prompt-black {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .prompt-thin-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .prompt-extralight-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .prompt-light-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .prompt-regular-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .prompt-medium-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .prompt-semibold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .prompt-bold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .prompt-extrabold-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .prompt-black-italic {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+
+
+
+/* Project Typography */
+.project-title {
+    font-size: var(--font-size-6xl);
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    max-width: none;
+}
+
+.project-description {
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Section Typography */
+.section-text {
+    font-family: 'Nokora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--color-text-primary);
+    max-width: 80ch;
+}
+
+/* List Typography */
+.title-small {
+    font-family: 'Nokora', sans-serif;
+    font-size: 0.875rem;
+    line-height: auto;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+}
+
+.left-title.big p {
+    font-family: 'Nokora', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+}
+
+/* About Section Typography */
+.bio-text {
+    font-size: var(--font-size-2xl);
+    line-height: 1.75;
+    color: var(--color-text-primary);
+    max-width: none;
+    font-family: "Nokora", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .bio-text {
+        font-size: 20px;
+        line-height: 1.7;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+}
+
+/* Secondary Text */
+.secondary {
+    color: var(--color-text-grey);
+    font-size: var(--font-size-base);
+}
+
+/* Display Typography */
+.display-large {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+}
+
+/* Section Header Typography */
+.section-header p {
+    margin-bottom: 0.29rem;
+}
+
+.section-header h1 {
+    margin-bottom: 1.14rem;
+}
+
+/* Title Typography */
+.title-medium {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    font-family: "Nokora", sans-serif;
+}
+
+/* Image Caption Typography */
+.stacked-image-item p {
+    max-width: 80ch;
+    font-family: "Nokora", sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--color-text-primary);
+}

@@ -14,7 +14,7 @@ function createNavigation(currentPage) {
             <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>
             <a href="extensions.html" class="button text-button ${currentPage === 'extensions' ? 'active' : ''}">Extensions</a>
             <a href="about.html" class="button text-button ${currentPage === 'about' ? 'active' : ''}">About</a>
-            <a href="assets/images/Maximilian-Relam-Wide-CV.pdf" class="button text-button ${currentPage === 'resume' ? 'active' : ''}" target="_blank">Resume</a>
+            <a href="assets/images/maximilian-relam-wide-CV-english.pdf" class="button text-button ${currentPage === 'resume' ? 'active' : ''}" target="_blank">Resume</a>
         </div>
     `;
     return nav;

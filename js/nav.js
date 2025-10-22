@@ -14,7 +14,17 @@ function createNavigation(currentPage) {
             <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>
             <a href="extensions.html" class="button text-button ${currentPage === 'extensions' ? 'active' : ''}">Extensions</a>
             <a href="about.html" class="button text-button ${currentPage === 'about' ? 'active' : ''}">About</a>
-            <a href="assets/images/maximilian-relam-wide-CV-english.pdf" class="button text-button ${currentPage === 'resume' ? 'active' : ''}" target="_blank">Resume</a>
+            <div class="dropdown">
+                <button class="button text-button dropdown-toggle ${currentPage === 'resume' ? 'active' : ''}" type="button">
+                    Resume
+                    <i class="feather-16" data-feather="chevron-down"></i>
+                    
+                </button>
+                <div class="dropdown-menu">
+                    <a href="assets/images/maximilian-relam-wide-CV-english.pdf" class="dropdown-item" target="_blank">English</a>
+                    <a href="assets/images/Maximilian-Relam-Wide-CV.pdf" class="dropdown-item" target="_blank">Swedish</a>
+                </div>
+            </div>
         </div>
     `;
     return nav;
@@ -72,5 +82,57 @@ function initNavigation(currentPage) {
             }
         }
     });
-} 
+    
+    // Initialize dropdown functionality
+    initDropdown();
+    
+    // Initialize feather icons for the newly created navigation
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
+}
+
+// Function to initialize dropdown functionality
+function initDropdown() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+    
+    // Close dropdowns when pressing Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+}
 

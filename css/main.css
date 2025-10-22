@@ -700,7 +700,6 @@ body {
     cursor: pointer;
     border: none;
     background: none;
-    padding: 0;
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -793,7 +792,6 @@ body {
         gap: 0.5rem;
         padding: 0.5rem;
         margin-top: 2rem;
-        
     }
 
     .nav-right {
@@ -803,11 +801,9 @@ body {
         margin-bottom: 1rem;
     }
 
-    }
-
     .nav-right .button.text-button {
         flex-basis: calc(50% - 2.5rem);
         text-align: center;
         padding: 0.5rem;
-
+    }
 }

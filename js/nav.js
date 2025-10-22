@@ -86,10 +86,31 @@ function initNavigation(currentPage) {
     // Initialize dropdown functionality
     initDropdown();
     
-    // Initialize feather icons for the newly created navigation
+    // Ensure Feather is loaded, then replace icons
+    loadFeatherIfNeeded(function() {
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    });
+}
+
+// Load Feather Icons from CDN if not already available, then run callback
+function loadFeatherIfNeeded(callback) {
     if (typeof feather !== 'undefined') {
-        feather.replace();
+        callback && callback();
+        return;
     }
+    var existing = document.querySelector('script[data-feather-cdn]');
+    if (existing) {
+        existing.addEventListener('load', function() { callback && callback(); });
+        return;
+    }
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/feather-icons/dist/feather.min.js';
+    script.async = true;
+    script.setAttribute('data-feather-cdn', 'true');
+    script.onload = function() { callback && callback(); };
+    document.head.appendChild(script);
 }
 
 // Function to initialize dropdown functionality

@@ -22,7 +22,7 @@ function createNavigation(currentPage) {
                 </button>
                 <div class="dropdown-menu">
                     <a href="assets/images/maximilian-relam-wide-CV-english.pdf" class="dropdown-item" target="_blank">English</a>
-                    <a href="assets/images/Maximilian-Relam-Wide-CV-svenska.pdf" class="dropdown-item" target="_blank">Swedish</a>
+                    <a href="assets/images/maximilian-relam-wide-CV-svenska.pdf" class="dropdown-item" target="_blank">Swedish</a>
                 </div>
             </div>
         </div>

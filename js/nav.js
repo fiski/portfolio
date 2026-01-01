@@ -6,29 +6,29 @@
  */
 function createNavigation(currentPage) {
     const nav = document.createElement('nav');
-    nav.className = 'nav';
+    nav.className = CONFIG.CLASSES.NAV;
     nav.innerHTML = `
-        <div class="nav-left">
-            <a href="index.html" class="button text-button ${currentPage === 'index' ? 'active' : ''}">
-                <img src="assets/images/Maximilian-relam-wide.svg" alt="Maximilian Relam Wide" class="logo">
+        <div class="${CONFIG.CLASSES.NAV_LEFT}">
+            <a href="${CONFIG.ROUTES.INDEX}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.INDEX ? CONFIG.CLASSES.ACTIVE : ''}">
+                <img src="${CONFIG.ASSETS.LOGO}" alt="Maximilian Relam Wide" class="${CONFIG.CLASSES.LOGO}">
             </a>
             <!-- Old text version
-            <a href="index.html" class="button text-button ${currentPage === 'index' ? 'active' : ''}">Maximilian Relam Wide</a>
+            <a href="${CONFIG.ROUTES.INDEX}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.INDEX ? CONFIG.CLASSES.ACTIVE : ''}">Maximilian Relam Wide</a>
             -->
         </div>
-        <div class="nav-right">
-            <a href="work.html" class="button text-button ${currentPage === 'work' ? 'active' : ''}">Work</a>
-            <a href="extensions.html" class="button text-button ${currentPage === 'extensions' ? 'active' : ''}">Extensions</a>
-            <a href="about.html" class="button text-button ${currentPage === 'about' ? 'active' : ''}">About</a>
-            <div class="dropdown">
-                <button class="button text-button dropdown-toggle ${currentPage === 'resume' ? 'active' : ''}" type="button">
+        <div class="${CONFIG.CLASSES.NAV_RIGHT}">
+            <a href="${CONFIG.ROUTES.WORK}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.WORK ? CONFIG.CLASSES.ACTIVE : ''}">Work</a>
+            <a href="${CONFIG.ROUTES.EXTENSIONS}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.EXTENSIONS ? CONFIG.CLASSES.ACTIVE : ''}">Extensions</a>
+            <a href="${CONFIG.ROUTES.ABOUT}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.ABOUT ? CONFIG.CLASSES.ACTIVE : ''}">About</a>
+            <div class="${CONFIG.CLASSES.DROPDOWN}">
+                <button class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${CONFIG.CLASSES.DROPDOWN_TOGGLE} ${currentPage === CONFIG.PAGES.RESUME ? CONFIG.CLASSES.ACTIVE : ''}" type="button">
                     Resume
                     <i class="feather-16" data-feather="chevron-down"></i>
-                    
+
                 </button>
-                <div class="dropdown-menu">
-                    <a href="assets/images/maximilian-relam-wide-CV-english.pdf" class="dropdown-item" target="_blank">English</a>
-                    <a href="assets/images/maximilian-relam-wide-CV-swedish.pdf" class="dropdown-item" target="_blank">Swedish</a>
+                <div class="${CONFIG.CLASSES.DROPDOWN_MENU}">
+                    <a href="${CONFIG.ASSETS.CV_ENGLISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">English</a>
+                    <a href="${CONFIG.ASSETS.CV_SWEDISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">Swedish</a>
                 </div>
             </div>
         </div>
@@ -49,45 +49,51 @@ function initNavigation(currentPage) {
     body.insertBefore(nav, body.firstChild);
 
     // Remove all existing background classes
-    body.classList.remove('index-bg', 'work-bg', 'about-bg', 'contact-bg', 'extensions-bg');
+    body.classList.remove(
+        CONFIG.BACKGROUND_CLASSES.INDEX,
+        CONFIG.BACKGROUND_CLASSES.WORK,
+        CONFIG.BACKGROUND_CLASSES.ABOUT,
+        CONFIG.BACKGROUND_CLASSES.CONTACT,
+        CONFIG.BACKGROUND_CLASSES.EXTENSIONS
+    );
 
     // Add the appropriate background class based on the current page
     switch (currentPage) {
-        case 'index':
-            body.classList.add('index-bg');
+        case CONFIG.PAGES.INDEX:
+            body.classList.add(CONFIG.BACKGROUND_CLASSES.INDEX);
             break;
-        case 'work':
-            body.classList.add('work-bg');
+        case CONFIG.PAGES.WORK:
+            body.classList.add(CONFIG.BACKGROUND_CLASSES.WORK);
             break;
-        case 'about':
-            body.classList.add('about-bg');
+        case CONFIG.PAGES.ABOUT:
+            body.classList.add(CONFIG.BACKGROUND_CLASSES.ABOUT);
             break;
-        case 'extensions':
-            body.classList.add('extensions-bg');
+        case CONFIG.PAGES.EXTENSIONS:
+            body.classList.add(CONFIG.BACKGROUND_CLASSES.EXTENSIONS);
             break;
-        case 'contact':
-            body.classList.add('contact-bg');
+        case CONFIG.PAGES.CONTACT:
+            body.classList.add(CONFIG.BACKGROUND_CLASSES.CONTACT);
             break;
     }
 
     // Update navigation items
-    const navItems = document.querySelectorAll('.nav-item');
+    const navItems = document.querySelectorAll(CONFIG.SELECTORS.NAV_ITEM);
     navItems.forEach(item => {
         const link = item.querySelector('a');
         if (link) {
             const href = link.getAttribute('href');
-            if (href === 'index.html' && currentPage === 'index') {
-                item.classList.add('active');
-            } else if (href === 'work.html' && currentPage === 'work') {
-                item.classList.add('active');
-            } else if (href === 'extensions.html' && currentPage === 'extensions') {
-                item.classList.add('active');
-            } else if (href === 'about.html' && currentPage === 'about') {
-                item.classList.add('active');
-            } else if (href === 'contact.html' && currentPage === 'contact') {
-                item.classList.add('active');
+            if (href === CONFIG.ROUTES.INDEX && currentPage === CONFIG.PAGES.INDEX) {
+                item.classList.add(CONFIG.CLASSES.ACTIVE);
+            } else if (href === CONFIG.ROUTES.WORK && currentPage === CONFIG.PAGES.WORK) {
+                item.classList.add(CONFIG.CLASSES.ACTIVE);
+            } else if (href === CONFIG.ROUTES.EXTENSIONS && currentPage === CONFIG.PAGES.EXTENSIONS) {
+                item.classList.add(CONFIG.CLASSES.ACTIVE);
+            } else if (href === CONFIG.ROUTES.ABOUT && currentPage === CONFIG.PAGES.ABOUT) {
+                item.classList.add(CONFIG.CLASSES.ACTIVE);
+            } else if (href === CONFIG.ROUTES.CONTACT && currentPage === CONFIG.PAGES.CONTACT) {
+                item.classList.add(CONFIG.CLASSES.ACTIVE);
             } else {
-                item.classList.remove('active');
+                item.classList.remove(CONFIG.CLASSES.ACTIVE);
             }
         }
     });
@@ -115,11 +121,11 @@ function loadFeatherIfNeeded(callback) {
     }
     var existing = document.querySelector('script[data-feather-cdn]');
     if (existing) {
-        existing.addEventListener('load', function() { callback && callback(); });
+        existing.addEventListener(CONFIG.EVENTS.LOAD, function() { callback && callback(); });
         return;
     }
     var script = document.createElement('script');
-    script.src = 'https://unpkg.com/feather-icons/dist/feather.min.js';
+    script.src = CONFIG.CDN.FEATHER_ICONS;
     script.async = true;
     script.setAttribute('data-feather-cdn', 'true');
     script.onload = function() { callback && callback(); };
@@ -130,43 +136,43 @@ function loadFeatherIfNeeded(callback) {
  * Initializes dropdown menu functionality with click handlers, keyboard navigation, and click-outside behavior
  */
 function initDropdown() {
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
+    const dropdowns = document.querySelectorAll(CONFIG.SELECTORS.DROPDOWN);
+
     dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        
+        const toggle = dropdown.querySelector(CONFIG.SELECTORS.DROPDOWN_TOGGLE);
+
         if (toggle) {
-            toggle.addEventListener('click', function(e) {
+            toggle.addEventListener(CONFIG.EVENTS.CLICK, function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
+
                 // Close other dropdowns
                 dropdowns.forEach(otherDropdown => {
                     if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
+                        otherDropdown.classList.remove(CONFIG.CLASSES.ACTIVE);
                     }
                 });
-                
+
                 // Toggle current dropdown
-                dropdown.classList.toggle('active');
+                dropdown.classList.toggle(CONFIG.CLASSES.ACTIVE);
             });
         }
     });
-    
+
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
+    document.addEventListener(CONFIG.EVENTS.CLICK, function(e) {
+        if (!e.target.closest(CONFIG.SELECTORS.DROPDOWN)) {
             dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
+                dropdown.classList.remove(CONFIG.CLASSES.ACTIVE);
             });
         }
     });
-    
+
     // Close dropdowns when pressing Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+    document.addEventListener(CONFIG.EVENTS.KEYDOWN, function(e) {
+        if (e.key === CONFIG.KEYS.ESCAPE) {
             dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
+                dropdown.classList.remove(CONFIG.CLASSES.ACTIVE);
             });
         }
     });

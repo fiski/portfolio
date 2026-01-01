@@ -5,24 +5,24 @@
  */
 function getLastCommitDate() {
     // Using the Git command to get the last commit date
-    fetch('https://api.github.com/repos/fiski/portfolio/commits/main', {
+    fetch(CONFIG.GITHUB_API.BASE_URL + CONFIG.GITHUB_API.ENDPOINTS.COMMITS_MAIN, {
         headers: {
-            'Accept': 'application/vnd.github.v3+json'
+            'Accept': CONFIG.GITHUB_API.HEADERS.Accept
         }
     })
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                throw new Error(`${CONFIG.TEXT.ERROR_HTTP}${response.status}`);
             }
             return response.json();
         })
         .then(data => {
             console.log('GitHub API response:', data); // Debug log
             if (!data.commit || !data.commit.author || !data.commit.author.date) {
-                throw new Error('Invalid response format');
+                throw new Error(CONFIG.TEXT.ERROR_INVALID_FORMAT);
             }
             const commitDate = new Date(data.commit.author.date);
-            const formattedDate = commitDate.toLocaleString('en-US', {
+            const formattedDate = commitDate.toLocaleString(CONFIG.LOCALE.ENGLISH, {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
@@ -31,21 +31,21 @@ function getLastCommitDate() {
                 hour12: false,
                 timeZoneName: 'short'
             });
-            const commitElement = document.getElementById('last-commit');
+            const commitElement = document.getElementById(CONFIG.IDS.LAST_COMMIT);
             if (commitElement) {
-                commitElement.textContent = `Last updated: ${formattedDate}`;
+                commitElement.textContent = `${CONFIG.TEXT.LAST_UPDATED_PREFIX}${formattedDate}`;
             } else {
                 console.error('Element with id "last-commit" not found');
             }
         })
         .catch(error => {
             console.error('Error fetching commit date:', error);
-            const commitElement = document.getElementById('last-commit');
+            const commitElement = document.getElementById(CONFIG.IDS.LAST_COMMIT);
             if (commitElement) {
-                commitElement.textContent = 'Last updated: Unable to fetch';
+                commitElement.textContent = `${CONFIG.TEXT.LAST_UPDATED_PREFIX}${CONFIG.TEXT.LAST_UPDATED_ERROR}`;
             }
         });
 }
 
 // Call the function when the page loads
-document.addEventListener('DOMContentLoaded', getLastCommitDate); 
+document.addEventListener(CONFIG.EVENTS.DOM_CONTENT_LOADED, getLastCommitDate); 

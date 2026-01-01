@@ -2,9 +2,9 @@
 feather.replace();
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const words = document.querySelectorAll('.word');
-    const container = document.querySelector('.bounce');
+document.addEventListener(CONFIG.EVENTS.DOM_CONTENT_LOADED, () => {
+    const words = document.querySelectorAll(CONFIG.SELECTORS.WORD);
+    const container = document.querySelector(CONFIG.SELECTORS.BOUNCE_CONTAINER);
 
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;

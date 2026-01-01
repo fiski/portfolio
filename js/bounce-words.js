@@ -3,8 +3,8 @@
  * Creates animation loop that continuously updates word positions with boundary collision detection
  */
 function initBounceWords() {
-    const words = document.querySelectorAll('.bounce .word');
-    const container = document.querySelector('.bounce');
+    const words = document.querySelectorAll(CONFIG.SELECTORS.BOUNCE_WORDS);
+    const container = document.querySelector(CONFIG.SELECTORS.BOUNCE_CONTAINER);
     if (!container || !words.length) return;
 
     const containerRect = container.getBoundingClientRect();
@@ -70,4 +70,4 @@ function initBounceWords() {
 }
 
 // Initialize when the page loads
-document.addEventListener('DOMContentLoaded', initBounceWords); 
+document.addEventListener(CONFIG.EVENTS.DOM_CONTENT_LOADED, initBounceWords); 

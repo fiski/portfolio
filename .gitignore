@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Claude Code
+.claude/
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - Other
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# OS Files - macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# OS Files - Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OS Files - Linux
+*~
+.directory
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Build outputs (if any build process is added later)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment variables
+.env
+.env.local
+.env.*.local

@@ -1,3 +1,8 @@
+/**
+ * Fetches and displays the last commit date from GitHub API
+ * Formats the date in US locale and updates the DOM element with id 'last-commit'
+ * Handles API errors and displays debug information in console
+ */
 function getLastCommitDate() {
     // Using the Git command to get the last commit date
     fetch('https://api.github.com/repos/fiski/portfolio/commits/main', {

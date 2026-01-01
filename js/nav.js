@@ -1,3 +1,9 @@
+/**
+ * Creates the navigation HTML element with logo, menu items, and dropdown
+ *
+ * @param {string} currentPage - Current page identifier ('index', 'work', 'about', 'extensions', 'resume')
+ * @returns {HTMLElement} The constructed nav element
+ */
 function createNavigation(currentPage) {
     const nav = document.createElement('nav');
     nav.className = 'nav';
@@ -30,11 +36,14 @@ function createNavigation(currentPage) {
     return nav;
 }
 
-// Function to initialize navigation
+/**
+ * Initializes and inserts navigation into the page, manages background classes and active states
+ *
+ * @param {string} currentPage - Current page identifier for setting active states and backgrounds
+ */
 function initNavigation(currentPage) {
     const body = document.body;
-    console.log("initNavigation körs med sidan:", currentPage); // Debug
-    
+
     // Create and insert navigation
     const nav = createNavigation(currentPage);
     body.insertBefore(nav, body.firstChild);
@@ -94,7 +103,11 @@ function initNavigation(currentPage) {
     });
 }
 
-// Load Feather Icons from CDN if not already available, then run callback
+/**
+ * Dynamically loads Feather Icons library from CDN if not already available
+ *
+ * @param {Function} callback - Function to execute after Feather Icons is loaded
+ */
 function loadFeatherIfNeeded(callback) {
     if (typeof feather !== 'undefined') {
         callback && callback();
@@ -113,7 +126,9 @@ function loadFeatherIfNeeded(callback) {
     document.head.appendChild(script);
 }
 
-// Function to initialize dropdown functionality
+/**
+ * Initializes dropdown menu functionality with click handlers, keyboard navigation, and click-outside behavior
+ */
 function initDropdown() {
     const dropdowns = document.querySelectorAll('.dropdown');
     

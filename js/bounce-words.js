@@ -1,3 +1,7 @@
+/**
+ * Initializes bouncing word animation with random positions and velocities
+ * Creates animation loop that continuously updates word positions with boundary collision detection
+ */
 function initBounceWords() {
     const words = document.querySelectorAll('.bounce .word');
     const container = document.querySelector('.bounce');
@@ -18,10 +22,22 @@ function initBounceWords() {
         updateWordPosition(word, wordStates[index]);
     });
 
+    /**
+     * Updates the CSS transform position of a word element
+     *
+     * @param {HTMLElement} word - The word DOM element to update
+     * @param {Object} state - Position state object
+     * @param {number} state.x - X coordinate in pixels
+     * @param {number} state.y - Y coordinate in pixels
+     */
     function updateWordPosition(word, state) {
         word.style.transform = `translate(${state.x}px, ${state.y}px)`;
     }
 
+    /**
+     * Main animation loop that updates word positions and handles collision detection
+     * Recursively calls itself using requestAnimationFrame for smooth 60fps animation
+     */
     function animate() {
         words.forEach((word, index) => {
             const state = wordStates[index];

@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
 
+    /**
+     * Generates a random number between min and max values
+     *
+     * @param {number} min - Minimum value (inclusive)
+     * @param {number} max - Maximum value (exclusive)
+     * @returns {number} Random float between min and max
+     */
     const getRandom = (min, max) => Math.random() * (max - min) + min;
 
     words.forEach(word => {
@@ -24,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         word.style.left = `${x}px`;
         word.style.top = `${y}px`;
 
+        /**
+         * Animates individual word movement with boundary collision detection
+         * Uses closure to access word-specific position and velocity variables
+         * Recursively calls itself via requestAnimationFrame
+         */
         const moveWord = () => {
             x += dx;
             y += dy;

@@ -1,3 +1,8 @@
+/**
+ * Loads footer component and fetches latest GitHub commit information
+ * Displays formatted commit date in Swedish locale (CET timezone)
+ * Handles API errors gracefully with fallback messages
+ */
 document.addEventListener('DOMContentLoaded', function() {
     // Load footer HTML
     fetch('components/footer.html')

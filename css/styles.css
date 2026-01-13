@@ -20,6 +20,32 @@ h3 {
     padding-bottom: 2rem;
 }
 
+/* Logo Sizing */
+.logo {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 769px) {
+    .logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-height: 32px;
+    }
+}
+
+@media (max-width: 465px) {
+    .logo {
+        max-height: 28px;
+    }
+}
 
 .left {
   display: flex;
@@ -786,7 +812,7 @@ h3 {
 
   .nav {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.75rem;
 
   } 
 

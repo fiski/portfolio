@@ -243,12 +243,13 @@ h3 {
 
 .extension-grid {  display: grid;
   grid-template-columns: 1fr 0.8fr 1.2fr;
-  grid-template-rows: 1fr 0.8fr 1fr;
+  grid-template-rows: 1fr 0.8fr 1fr 0.8fr;
   gap: 2em 2em;
   grid-auto-flow: row;
   grid-template-areas:
     "auctionet auctionet-img auctionet-img"
     "tradera-vinted tradera-vinted-img tradera-vinted-img"
+    "brandsfrom brandsfrom-img brandsfrom-img"
     ". . .";
 }
 
@@ -259,6 +260,10 @@ h3 {
 .tradera-vinted { grid-area: tradera-vinted; }
 
 .tradera-vinted-img { grid-area: tradera-vinted-img; }
+
+.brandsfrom { grid-area: brandsfrom; }
+
+.brandsfrom-img { grid-area: brandsfrom-img; }
 
 
 
@@ -857,7 +862,9 @@ h3 {
       'auctionet'
       'auctionet-img'
       'tradera-vinted'
-      'tradera-vinted-img';
+      'tradera-vinted-img'
+      'brandsfrom'
+      'brandsfrom-img';
     gap: 2rem;
   }
 

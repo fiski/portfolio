@@ -1,7 +1,7 @@
 /**
  * Creates the navigation HTML element with logo, menu items, and dropdown
  *
- * @param {string} currentPage - Current page identifier ('index', 'work', 'about', 'extensions', 'resume')
+ * @param {string} currentPage - Current page identifier ('index', 'design', 'about', 'development', 'resume')
  * @returns {HTMLElement} The constructed nav element
  */
 function createNavigation(currentPage) {
@@ -17,8 +17,8 @@ function createNavigation(currentPage) {
             -->
         </div>
         <div class="${CONFIG.CLASSES.NAV_RIGHT}">
-            <a href="${CONFIG.ROUTES.WORK}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.WORK ? CONFIG.CLASSES.ACTIVE : ''}">Work</a>
-            <a href="${CONFIG.ROUTES.EXTENSIONS}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.EXTENSIONS ? CONFIG.CLASSES.ACTIVE : ''}">Extensions</a>
+            <a href="${CONFIG.ROUTES.WORK}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.WORK ? CONFIG.CLASSES.ACTIVE : ''}">Design</a>
+            <a href="${CONFIG.ROUTES.EXTENSIONS}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.EXTENSIONS ? CONFIG.CLASSES.ACTIVE : ''}">Development</a>
             <a href="${CONFIG.ROUTES.ABOUT}" class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${currentPage === CONFIG.PAGES.ABOUT ? CONFIG.CLASSES.ACTIVE : ''}">About</a>
             <div class="${CONFIG.CLASSES.DROPDOWN}">
                 <button class="${CONFIG.CLASSES.BUTTON} ${CONFIG.CLASSES.TEXT_BUTTON} ${CONFIG.CLASSES.DROPDOWN_TOGGLE} ${currentPage === CONFIG.PAGES.RESUME ? CONFIG.CLASSES.ACTIVE : ''}" type="button">

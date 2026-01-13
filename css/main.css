@@ -8,6 +8,42 @@ body {
     font-family: "Nokora", sans-serif;
     background-color: var(--background-color);
     color: var(--color-text-primary);
+    /* Prevent layout shift during page load */
+    min-height: 100vh;
+    /* Add padding to body to account for fixed navigation */
+    padding-top: 104px;
+}
+
+/* Prevent FOUC with minimal delay - only hide until nav renders */
+body:not(.js-loaded) .section {
+    visibility: hidden;
+}
+
+/* Show content immediately when JavaScript is ready */
+body.js-loaded .section {
+    visibility: visible;
+    animation: fadeIn 0.15s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 150px; /* Space for navigation on mobile */
+    }
+}
+
+@media (max-width: 465px) {
+    body {
+        padding-top: 200px; /* Space for navigation on small mobile */
+    }
 }
 
 /* Project Template Styles */
@@ -639,6 +675,10 @@ body {
     padding-right: 3rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav-left {

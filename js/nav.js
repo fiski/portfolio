@@ -48,6 +48,9 @@ function initNavigation(currentPage) {
     const nav = createNavigation(currentPage);
     body.insertBefore(nav, body.firstChild);
 
+    // Mark body as loaded to prevent FOUC
+    body.classList.add('js-loaded');
+
     // Remove all existing background classes
     body.classList.remove(
         CONFIG.BACKGROUND_CLASSES.INDEX,

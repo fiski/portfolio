@@ -744,6 +744,12 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+.dropdown-toggle:active {
+    transform: translateY(0);
+    background-color: rgba(20, 81, 237, 0.12);
+    box-shadow: 0 0 0 2px #1451ED;
+}
+
 .dropdown.active .dropdown-toggle {
     background-color: rgba(20, 81, 237, 0.1);
 }

@@ -36,11 +36,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.text-button:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-}
-
 .text-button:focus {
     background-color: rgba(20, 81, 237, 0.08);
     box-shadow: 0 0 0 3px rgba(20, 81, 237, 0.12);
@@ -54,8 +49,14 @@
     outline-offset: 2px;
 }
 
-.text-button:focus:not(:focus-visible) {
+.text-button:focus:not(:focus-visible):not(:active) {
     box-shadow: none;
+}
+
+.text-button:active {
+    transform: translateY(0);
+    background-color: rgba(20, 81, 237, 0.12);
+    box-shadow: 0 0 0 2px #1451ED;
 }
 
 .text-button.active {

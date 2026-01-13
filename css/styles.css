@@ -307,6 +307,10 @@ h3 {
     color: inherit;
 }
 
+.featured-project-link:hover {
+    opacity: 1;
+}
+
 .featured-project-link img {
     position: absolute;
     top: 0;
@@ -320,6 +324,11 @@ h3 {
     position: relative;
     z-index: 1;
     padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.featured-project:hover .titles {
+    transform: scale(1.0204);
 }
 
 .motto {
@@ -530,7 +539,9 @@ h3 {
 }
 
 .card-title {
-    background-color: #3f3c3c;
+    background: linear-gradient(135deg,
+        hsla(0, 0%, 28%, 1) 0%,
+        hsla(0, 0%, 22%, 1) 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.4rem;
@@ -542,14 +553,38 @@ h3 {
     align-items: center;
     justify-content: center;
     min-height: 1.75rem;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.15),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.18),
+            0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
     &.second {
-        background-color: #818181;
+        background: linear-gradient(135deg,
+            hsla(0, 0%, 82%, 1) 0%,
+            hsla(0, 0%, 74%, 1) 100%);
+        color: hsla(0, 0%, 20%, 1);
+        box-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.08),
+            0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    &.second:hover {
+        transform: translateY(-1px);
+        box-shadow:
+            0 2px 3px rgba(0, 0, 0, 0.1),
+            0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
     &.inverted {
         background-color: white;
-      
+
     }
 }
 

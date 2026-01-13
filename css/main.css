@@ -223,6 +223,11 @@ body {
     position: absolute;
     z-index: 1;
     color: white;
+    transition: transform 0.3s ease;
+}
+
+.featured-project:hover .titles {
+    transform: scale(1.0204);
 }
 
 /* Work page specific styles */
@@ -591,6 +596,11 @@ body {
     position: absolute;
     z-index: 1;
     color: white;
+    transition: transform 0.3s ease;
+}
+
+.featured-project:hover .titles {
+    transform: scale(1.0204);
 }
 
 

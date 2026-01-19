@@ -122,5 +122,38 @@ const CONFIG = {
     SWEDISH: 'sv-SE',
     ENGLISH: 'en-US',
     TIMEZONE_STOCKHOLM: 'Europe/Stockholm'
+  },
+
+  // Carousel configuration
+  CAROUSEL: {
+    SELECTORS: {
+      CONTAINER: '.client-logo-list',
+      TRACK: '.client-logo-track'
+    },
+    CLASSES: {
+      DRAGGING: 'is-dragging',
+      PAUSED: 'is-paused'
+    },
+    // Logo count (original set, duplicated for seamless loop)
+    LOGO_COUNT: 8,
+    // Dimensions per breakpoint (matches CSS)
+    DIMENSIONS: {
+      DESKTOP: { logoWidth: 185, padding: 64 },   // 4rem = 64px
+      TABLET: { logoWidth: 185, padding: 32 },    // 2rem = 32px
+      MOBILE: { logoWidth: 140, padding: 24 }     // 1.5rem = 24px
+    },
+    BREAKPOINTS: {
+      TABLET: 768,
+      MOBILE: 463
+    },
+    // Physics settings
+    MOMENTUM: {
+      FRICTION: 0.92,
+      MIN_VELOCITY: 0.5,
+      VELOCITY_SCALE: 0.3
+    },
+    // Timing
+    RESUME_DELAY: 2000,           // ms before resuming CSS animation
+    MIN_DRAG_DISTANCE: 5          // px threshold to start drag
   }
 };

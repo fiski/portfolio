@@ -6,6 +6,9 @@ document.addEventListener(CONFIG.EVENTS.DOM_CONTENT_LOADED, () => {
     const words = document.querySelectorAll(CONFIG.SELECTORS.WORD);
     const container = document.querySelector(CONFIG.SELECTORS.BOUNCE_CONTAINER);
 
+    // Exit early if bounce container doesn't exist on this page
+    if (!container) return;
+
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
 

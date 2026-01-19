@@ -338,6 +338,7 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 - **Don't hardcode values** - Use `config.js` for all configuration
 - **Don't mix coding styles** - Be consistent with existing patterns
 - **Don't introduce security vulnerabilities** - Sanitize inputs, be careful with API data
+- **Use /dev/null in Git Bash, not nul** - Windows reserved filenames cause issues
 
 ### Preferences
 

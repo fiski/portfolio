@@ -397,8 +397,8 @@ h3 {
 
 .client-logo-track {
   display: flex;
-  width: calc(12 * (185px + 4rem)); /* 12 logos * (width + total padding) */
-  animation: scroll 30s linear infinite;
+  width: calc(16 * (185px + 4rem)); /* 16 logos (8 original + 8 duplicates) */
+  animation: scroll 40s linear infinite;
 }
 
 .client-logo-track img {
@@ -414,16 +414,16 @@ h3 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-6 * (185px + 4rem))); /* Move by half the width (6 logos) */
+    transform: translateX(calc(-8 * (185px + 4rem))); /* Move by half (8 logos) */
   }
 }
 
 @media (max-width: 768px) {
   .client-logo-track {
-    animation-duration: 40s;
-    width: calc(12 * (185px + 2rem)); /* Reduce padding space on mobile */
+    animation-duration: 35s;
+    width: calc(16 * (185px + 2rem)); /* 16 logos with reduced padding */
   }
-  
+
   .client-logo-track img {
     padding: 0 1rem;
   }
@@ -433,19 +433,20 @@ h3 {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-6 * (185px + 2rem))); /* Match the reduced padding */
+      transform: translateX(calc(-8 * (185px + 2rem))); /* Move by half (8 logos) */
     }
   }
 }
 
 @media (max-width: 463px) {
   .client-logo-track {
-    width: calc(12 * (140px + 1.5rem)); /* Smaller logos and padding for very small screens */
+    width: calc(16 * (140px + 1.5rem)); /* 16 logos with smaller dimensions */
+    animation-duration: 25s;
   }
-  
+
   .client-logo-track img {
     width: 140px;
-    height: 66px; /* Maintain aspect ratio */
+    height: 66px;
     padding: 0 0.75rem;
   }
 
@@ -454,19 +455,16 @@ h3 {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-6 * (140px + 1.5rem))); /* Match the smaller dimensions */
+      transform: translateX(calc(-8 * (140px + 1.5rem))); /* Move by half (8 logos) */
     }
   }
 }
 
-/* Duplicate the track dynamically */
-.client-logo-track::after {
-  content: "";
-  display: flex;
-}
-
-.client-logo-track::after img {
-  content: attr(src);
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-track {
+    animation: none;
+  }
 }
 .expertise {
   grid-area: expertise;
@@ -894,14 +892,7 @@ h3 {
   }
 
   .right h3 {
-
     align-items: flex-start;
-  }
-
-  .client-logo-track {
-    display: flex;
-    animation: scroll 12s linear infinite;
-    width: calc(400%);
   }
 
   .footer {

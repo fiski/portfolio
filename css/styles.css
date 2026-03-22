@@ -640,6 +640,59 @@ h3 {
     }
 }
 
+/* Variant A glassmorphism badges — light frosted glass for dark thumbnails */
+.project--volvo .card-title,
+.project--telia .card-title {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.project--volvo .card-title.second,
+.project--telia .card-title.second {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Coop — light thumbnail needs stronger dark scrim */
+.project--coop .card-title {
+    background: rgba(22, 99, 72, 0.62);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.project--coop .card-title.second {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Biljetter — near-white thumbnail; opaque dark badge for contrast */
+.project--biljetter .card-title {
+    background: rgba(15, 15, 20, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.project--biljetter .card-title.second {
+    background: rgba(15, 15, 20, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 
 .intro {
   p {

@@ -47,10 +47,10 @@ function createBottomNav(currentPage) {
     nav.className = 'bottom-nav';
 
     const tabs = [
-        { label: 'Home',   icon: 'home',      href: CONFIG.ROUTES.INDEX,      page: CONFIG.PAGES.INDEX },
-        { label: 'Design', icon: 'layout',    href: CONFIG.ROUTES.WORK,       page: CONFIG.PAGES.WORK },
-        { label: 'Dev',    icon: 'code',      href: CONFIG.ROUTES.EXTENSIONS, page: CONFIG.PAGES.EXTENSIONS },
-        { label: 'About',  icon: 'user',      href: CONFIG.ROUTES.ABOUT,      page: CONFIG.PAGES.ABOUT },
+        { label: 'Home',   customIcon: CONFIG.ASSETS.ICONS.SUN_GLASSES, href: CONFIG.ROUTES.INDEX,      page: CONFIG.PAGES.INDEX },
+        { label: 'Design', customIcon: CONFIG.ASSETS.ICONS.PENCIL,        href: CONFIG.ROUTES.WORK,       page: CONFIG.PAGES.WORK },
+        { label: 'Dev',    customIcon: CONFIG.ASSETS.ICONS.GLASSES,      href: CONFIG.ROUTES.EXTENSIONS, page: CONFIG.PAGES.EXTENSIONS },
+        { label: 'About',  customIcon: CONFIG.ASSETS.ICONS.STICKMAN2,    href: CONFIG.ROUTES.ABOUT,      page: CONFIG.PAGES.ABOUT },
     ];
 
     tabs.forEach(tab => {
@@ -58,7 +58,10 @@ function createBottomNav(currentPage) {
         const a = document.createElement('a');
         a.className = 'bottom-nav-item' + (isActive ? ' active' : '');
         a.href = tab.href;
-        a.innerHTML = `<i data-feather="${tab.icon}"></i><span>${tab.label}</span>`;
+        const iconHTML = tab.customIcon
+            ? `<img class="bottom-nav-custom-icon" src="${tab.customIcon}" alt="">`
+            : `<i data-feather="${tab.icon}"></i>`;
+        a.innerHTML = `${iconHTML}<span>${tab.label}</span>`;
         nav.appendChild(a);
     });
 
@@ -75,7 +78,7 @@ function createBottomNav(currentPage) {
     const btn = document.createElement('button');
     btn.className = 'bottom-nav-item' + (isResumeActive ? ' active' : '');
     btn.type = 'button';
-    btn.innerHTML = '<i data-feather="file-text"></i><span>Resume</span>';
+    btn.innerHTML = `<img class="bottom-nav-custom-icon" src="${CONFIG.ASSETS.ICONS.BOOK}" alt=""><span>Resume</span>`;
     btn.addEventListener('click', function(e) {
         e.stopPropagation();
         wrapper.classList.toggle('open');

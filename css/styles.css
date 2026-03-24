@@ -1402,6 +1402,19 @@ a:hover {
     stroke-width: 1.75;
 }
 
+.bottom-nav-custom-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    opacity: 0.55;
+    transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+.bottom-nav-item.active .bottom-nav-custom-icon {
+    filter: invert(26%) sepia(96%) saturate(2167%) hue-rotate(215deg) brightness(92%) contrast(96%);
+    opacity: 1;
+}
+
 .bottom-nav-item.active {
     color: #1451ED;
     font-weight: 500;

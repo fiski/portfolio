@@ -104,7 +104,15 @@ const CONFIG = {
   ASSETS: {
     LOGO: 'assets/images/Maximilian-relam-wide.svg',
     CV_ENGLISH: 'assets/images/maximilian-relam-wide-CV-english.pdf',
-    CV_SWEDISH: 'assets/images/maximilian-relam-wide-CV-swedish.pdf'
+    CV_SWEDISH: 'assets/images/maximilian-relam-wide-CV-swedish.pdf',
+    ICONS: {
+      SUN_GLASSES: 'assets/icons/sun-glasses.svg',
+      GLASSES:     'assets/icons/glasses.svg',
+      STICKMAN:    'assets/icons/stickman.svg',
+      STICKMAN2:   'assets/icons/stickman2.svg',
+      PENCIL:      'assets/icons/pencil.svg',
+      BOOK:        'assets/icons/book.svg'
+    }
   },
 
   // Component paths

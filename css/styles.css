@@ -1383,9 +1383,10 @@ a:hover {
     gap: 4px;
     padding: 8px 12px 4px;
     text-decoration: none;
-    font-family: 'Prompt', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font-family: 'Orator', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: lowercase;
     line-height: 1;
     background: none;
     border: none;

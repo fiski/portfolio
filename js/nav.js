@@ -37,6 +37,82 @@ function createNavigation(currentPage) {
 }
 
 /**
+ * Creates the bottom tab bar HTML element for mobile screens
+ *
+ * @param {string} currentPage - Current page identifier for setting active states
+ * @returns {HTMLElement} The constructed bottom nav element
+ */
+function createBottomNav(currentPage) {
+    const nav = document.createElement('nav');
+    nav.className = 'bottom-nav';
+
+    const tabs = [
+        { label: 'Home',   icon: 'home',      href: CONFIG.ROUTES.INDEX,      page: CONFIG.PAGES.INDEX },
+        { label: 'Design', icon: 'layout',    href: CONFIG.ROUTES.WORK,       page: CONFIG.PAGES.WORK },
+        { label: 'Dev',    icon: 'code',      href: CONFIG.ROUTES.EXTENSIONS, page: CONFIG.PAGES.EXTENSIONS },
+        { label: 'About',  icon: 'user',      href: CONFIG.ROUTES.ABOUT,      page: CONFIG.PAGES.ABOUT },
+    ];
+
+    tabs.forEach(tab => {
+        const isActive = currentPage === tab.page;
+        const a = document.createElement('a');
+        a.className = 'bottom-nav-item' + (isActive ? ' active' : '');
+        a.href = tab.href;
+        a.innerHTML = `<i data-feather="${tab.icon}"></i><span>${tab.label}</span>`;
+        nav.appendChild(a);
+    });
+
+    // Resume tab with action sheet
+    const isResumeActive = currentPage === CONFIG.PAGES.RESUME;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'bottom-nav-resume-wrapper';
+    wrapper.style.cssText = 'position:relative;display:flex;flex-direction:column;align-items:center;';
+
+    const sheet = document.createElement('div');
+    sheet.className = 'bottom-nav-resume-sheet';
+    sheet.innerHTML = `<a href="${CONFIG.ASSETS.CV_ENGLISH}" target="_blank">English CV</a><a href="${CONFIG.ASSETS.CV_SWEDISH}" target="_blank">Swedish CV</a>`;
+
+    const btn = document.createElement('button');
+    btn.className = 'bottom-nav-item' + (isResumeActive ? ' active' : '');
+    btn.type = 'button';
+    btn.innerHTML = '<i data-feather="file-text"></i><span>Resume</span>';
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        wrapper.classList.toggle('open');
+    });
+
+    wrapper.appendChild(sheet);
+    wrapper.appendChild(btn);
+    nav.appendChild(wrapper);
+
+    return nav;
+}
+
+/**
+ * Initializes and appends the bottom tab bar to the page
+ *
+ * @param {string} currentPage - Current page identifier for setting active states
+ */
+function initBottomNav(currentPage) {
+    const bottomNav = createBottomNav(currentPage);
+    document.body.appendChild(bottomNav);
+
+    // Close Resume sheet on outside click
+    document.addEventListener(CONFIG.EVENTS.CLICK, function() {
+        var wrapper = document.querySelector('.bottom-nav-resume-wrapper');
+        if (wrapper) wrapper.classList.remove('open');
+    });
+
+    // Close Resume sheet on Escape
+    document.addEventListener(CONFIG.EVENTS.KEYDOWN, function(e) {
+        if (e.key === CONFIG.KEYS.ESCAPE) {
+            var wrapper = document.querySelector('.bottom-nav-resume-wrapper');
+            if (wrapper) wrapper.classList.remove('open');
+        }
+    });
+}
+
+/**
  * Initializes and inserts navigation into the page, manages background classes and active states
  *
  * @param {string} currentPage - Current page identifier for setting active states and backgrounds
@@ -104,7 +180,10 @@ function initNavigation(currentPage) {
     // Initialize dropdown functionality
     initDropdown();
     
-    // Ensure Feather is loaded, then replace icons
+    // Inject bottom tab bar (mobile only, experimental)
+    initBottomNav(currentPage);
+
+    // Ensure Feather is loaded, then replace icons (includes bottom nav icons)
     loadFeatherIfNeeded(function() {
         if (typeof feather !== 'undefined') {
             feather.replace();

@@ -79,8 +79,8 @@ h2 {
     font-family: 'Nokora';
     font-style: normal;
     font-weight: 400;
-    font-size: 45px;
-    line-height: 52px;
+    font-size: clamp(28px, calc(20px + 1.74vw), 45px);
+    line-height: 1.15;
     color: var(--color-text-primary);
     margin-bottom: 1rem;
 }
@@ -271,9 +271,6 @@ h3 {
         line-height: 1.7;
     }
 
-    h2 {
-        font-size: 38px;
-    }
 }
 
 /* Secondary Text */

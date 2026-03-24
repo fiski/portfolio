@@ -1370,6 +1370,7 @@ a:hover {
     backdrop-filter: blur(20px) saturate(180%);
     border-radius: 12px;
     box-shadow: 0 4px 28px rgba(0, 0, 0, 0.13);
+    border: 1px solid rgba(20, 81, 237, 0.18);
     padding: 8px 4px calc(8px + env(safe-area-inset-bottom, 0px));
     justify-content: space-around;
     align-items: flex-start;

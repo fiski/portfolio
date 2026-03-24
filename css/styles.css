@@ -1393,6 +1393,7 @@ a:hover {
     position: relative;
     transition: color 0.15s ease;
     -webkit-tap-highlight-color: transparent;
+    color: inherit;
 }
 
 .bottom-nav-item svg {
@@ -1402,12 +1403,31 @@ a:hover {
     stroke-width: 1.75;
 }
 
+.bottom-nav-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
 .bottom-nav-custom-icon {
+    display: block;
     width: 22px;
     height: 22px;
-    flex-shrink: 0;
     opacity: 0.55;
     transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+.bottom-nav-custom-icon--lg {
+    width: 26px;
+    height: 26px;
+}
+
+.bottom-nav-custom-icon--xl {
+    width: 29px;
+    height: 29px;
 }
 
 .bottom-nav-item.active .bottom-nav-custom-icon {

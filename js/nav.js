@@ -47,9 +47,9 @@ function createBottomNav(currentPage) {
     nav.className = 'bottom-nav';
 
     const tabs = [
-        { label: 'Home',   customIcon: CONFIG.ASSETS.ICONS.SUN_GLASSES, href: CONFIG.ROUTES.INDEX,      page: CONFIG.PAGES.INDEX },
-        { label: 'Design', customIcon: CONFIG.ASSETS.ICONS.PENCIL,        href: CONFIG.ROUTES.WORK,       page: CONFIG.PAGES.WORK },
-        { label: 'Dev',    customIcon: CONFIG.ASSETS.ICONS.GLASSES,      href: CONFIG.ROUTES.EXTENSIONS, page: CONFIG.PAGES.EXTENSIONS },
+        { label: 'Home',   customIcon: CONFIG.ASSETS.ICONS.SUN_GLASSES, xlargeIcon: true, href: CONFIG.ROUTES.INDEX,      page: CONFIG.PAGES.INDEX },
+        { label: 'Design', customIcon: CONFIG.ASSETS.ICONS.PENCIL,                         href: CONFIG.ROUTES.WORK,       page: CONFIG.PAGES.WORK },
+        { label: 'Dev',    customIcon: CONFIG.ASSETS.ICONS.GLASSES,      largeIcon: true,  href: CONFIG.ROUTES.EXTENSIONS, page: CONFIG.PAGES.EXTENSIONS },
         { label: 'About',  customIcon: CONFIG.ASSETS.ICONS.STICKMAN2,    href: CONFIG.ROUTES.ABOUT,      page: CONFIG.PAGES.ABOUT },
     ];
 
@@ -58,9 +58,12 @@ function createBottomNav(currentPage) {
         const a = document.createElement('a');
         a.className = 'bottom-nav-item' + (isActive ? ' active' : '');
         a.href = tab.href;
+        const iconClass = tab.xlargeIcon ? ' bottom-nav-custom-icon--xl'
+            : tab.largeIcon ? ' bottom-nav-custom-icon--lg'
+            : '';
         const iconHTML = tab.customIcon
-            ? `<img class="bottom-nav-custom-icon" src="${tab.customIcon}" alt="">`
-            : `<i data-feather="${tab.icon}"></i>`;
+            ? `<span class="bottom-nav-icon-wrap"><img class="bottom-nav-custom-icon${iconClass}" src="${tab.customIcon}" alt=""></span>`
+            : `<span class="bottom-nav-icon-wrap"><i data-feather="${tab.icon}"></i></span>`;
         a.innerHTML = `${iconHTML}<span>${tab.label}</span>`;
         nav.appendChild(a);
     });
@@ -78,7 +81,7 @@ function createBottomNav(currentPage) {
     const btn = document.createElement('button');
     btn.className = 'bottom-nav-item' + (isResumeActive ? ' active' : '');
     btn.type = 'button';
-    btn.innerHTML = `<img class="bottom-nav-custom-icon" src="${CONFIG.ASSETS.ICONS.BOOK}" alt=""><span>Resume</span>`;
+    btn.innerHTML = `<span class="bottom-nav-icon-wrap"><img class="bottom-nav-custom-icon" src="${CONFIG.ASSETS.ICONS.BOOK}" alt=""></span><span>Resume</span>`;
     btn.addEventListener('click', function(e) {
         e.stopPropagation();
         wrapper.classList.toggle('open');

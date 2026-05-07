@@ -34,8 +34,8 @@ A personal portfolio showcasing UX/UI design work, professional experience, and 
 ### Directory Structure
 ```
 portfolio/
-├── index.html              # Homepage with about, experience, work sections
-├── about.html              # About page
+├── index.html              # Homepage with , experience, work sections
+├── .html              #  page
 ├── work.html               # Work/projects overview
 ├── coop.html               # Coop Insights project details
 ├── volvo.html              # Volvo project details
@@ -351,7 +351,7 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 
 ## Project Context for AI
 
-### About the Owner
+###  the Owner
 
 **Name:** Maximilian Relam Wide
 **Role:** UX/UI Designer
@@ -386,8 +386,8 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 - Fresh deployments to GitHub Pages
 
 **Main pages:**
-- **Home** (`index.html`) - About, experience, work showcase
-- **About** (`about.html`) - Personal background
+- **Home** (`index.html`) - , experience, work showcase
+- **** (`.html`) - Personal background
 - **Work** (`work.html`) - Project portfolio
 - **Projects:** Coop (`coop.html`), Volvo (`volvo.html`), Telia (`telia.html`)
 - **Extensions** (`extensions.html`) - Development projects

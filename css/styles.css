@@ -326,7 +326,7 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.featured-project:hover {
+.index-bg .featured-project:hover {
     transform: scale(0.98);
 }
 
@@ -342,7 +342,7 @@ h3 {
     opacity: 1;
 }
 
-.featured-project-link img {
+.index-bg .featured-project-link img {
     position: absolute;
     top: 0;
     left: 0;
@@ -353,7 +353,7 @@ h3 {
     transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.featured-project-link img.is-active {
+.index-bg .featured-project-link img.is-active {
     transform: translateY(0);
 }
 
@@ -364,7 +364,7 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.featured-project:hover .titles {
+.index-bg .featured-project:hover .titles {
     transform: scale(1.0204);
 }
 

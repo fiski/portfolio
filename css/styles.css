@@ -790,6 +790,9 @@ h3 {
 .list-item.small:hover  { background-color: rgba(0, 0, 0, 0.04);  border-radius: 0.5rem; }
 .list-item.small:active { background-color: rgba(0, 0, 0, 0.08); border-radius: 0.5rem; }
 
+.list-item.small:hover::after,
+.list-item.small:active::after { display: none; }
+
 .list-item.small.paragraph {
   gap: 1rem;
 }

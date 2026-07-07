@@ -349,6 +349,12 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateY(100%);
+    transition: transform 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.featured-project-link img.is-active {
+    transform: translateY(0);
 }
 
 .featured-project .titles {

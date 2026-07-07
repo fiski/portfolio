@@ -132,6 +132,27 @@ const CONFIG = {
     TIMEZONE_STOCKHOLM: 'Europe/Stockholm'
   },
 
+  // Work preview hover configuration
+  WORK_PREVIEW: {
+    DEFAULT: 'coop',
+    PROJECTS: {
+      coop:      { cssClass: 'project--coop',      href: 'coop.html',  img: 'assets/images/Coop/coop-ver2.png',            alt: 'Coop Insights', title: 'Coop Insights', subtitle: 'Coop Sverige' },
+      volvo:     { cssClass: 'project--volvo',     href: 'volvo.html', img: 'assets/images/volvo/Cover-Volvo.png',         alt: 'Volvo',         title: 'Volvo',         subtitle: 'Volvo Cars' },
+      telia:     { cssClass: 'project--telia',     href: 'telia.html', img: 'assets/images/Telia/cover-telia.png',         alt: 'Telia',         title: 'Telia',         subtitle: 'Mitt Telia' },
+      biljetter: { cssClass: 'project--biljetter', href: null,         img: 'assets/images/Biljetter/biljetter-cover.png', alt: 'Biljetter',     title: 'Biljetter',     subtitle: 'Coming soon' }
+    },
+    SELECTORS: {
+      LIST_ITEM:    '.list-item[data-project]',
+      WORK_BLOCK:   '.content-block.work',
+      PREVIEW:      '.js-work-preview',
+      PREVIEW_LINK: '.featured-project-link',
+      PREVIEW_IMGS: 'img[data-project]',
+      TITLE:        '.titles .card-title:first-child',
+      SUBTITLE:     '.titles .card-title.second'
+    },
+    CLASSES: { ACTIVE_IMG: 'is-active' }
+  },
+
   // Carousel configuration
   CAROUSEL: {
     SELECTORS: {

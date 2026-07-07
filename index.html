@@ -143,14 +143,14 @@
                         Work
                     </div>
                     <div class="list">
-                        <div class="list-item small">
+                        <div class="list-item small" data-project="coop">
                             <div class="title-small">
                                 <p>UX/UI Design</p>
                             </div>
                             <div class="list-row">
                                 <div class="left-title big">
                                     <p><a href="coop.html" class="project-link">
-                                        <p>Coop Insights</p>             
+                                        <p>Coop Insights</p>
                                     </a>
                                 </div>
                                 <a href="coop.html" class="arrowBtn">
@@ -160,13 +160,13 @@
 
 
                         </div>
-                        <div class="list-item small">
+                        <div class="list-item small" data-project="volvo">
                             <div class="title-small">
                                 <p>UX/UI Design</p>
                             </div>
                             <div class="list-row">
                                 <div class="left-title big">
-                                    <p><a href="volvo.html">Volvo</a></p>             
+                                    <p><a href="volvo.html">Volvo</a></p>
                                 </div>
                                 <a href="volvo.html" class="arrowBtn">
                                     <i class="feather-16" data-feather="arrow-right"></i>
@@ -175,14 +175,14 @@
 
 
                         </div>
-                        <div class="list-item small">
+                        <div class="list-item small" data-project="telia">
                             <div class="title-small">
                                 <p>UX/UI Design</p>
                             </div>
                             <div class="list-row">
                                 <div class="left-title big">
                                     <p><a href="telia.html" class="project-link">
-                                        <p>Telia</p>             
+                                        <p>Telia</p>
                                     </a>
                                 </div>
                                 <a href="telia.html" class="project-link">
@@ -194,13 +194,13 @@
 
 
                         </div>
-                        <div class="list-item small">
+                        <div class="list-item small" data-project="biljetter">
                             <div class="title-small">
                                 <p>Hobby Project</p>
                             </div>
                             <div class="list-row">
                                 <div class="left-title big">
-                                    <p>Biljetter (to be added)</p>             
+                                    <p>Biljetter (to be added)</p>
                                 </div>
                                 <!-- <button class="arrowBtn">
                                     <i class="feather-16" data-feather="arrow-right"></i>
@@ -210,17 +210,20 @@
 
                         </div>
 
-    
+
                     </div>
-                    
+
                 </div>
-                <div class="content-block featured-project project--coop">
+                <div class="content-block featured-project project--coop js-work-preview">
                     <a href="coop.html" class="featured-project-link">
                         <div class="titles">
                             <div class="card-title">Coop Insights</div>
                             <div class="card-title second">Coop Sverige</div>
                         </div>
-                        <img src="assets/images/Coop/coop-ver2.png" alt="Coop Insights Project">
+                        <img data-project="coop"      class="is-active" src="assets/images/Coop/coop-ver2.png"            alt="Coop Insights">
+                        <img data-project="volvo"                        src="assets/images/volvo/Cover-Volvo.png"          alt="Volvo">
+                        <img data-project="telia"                        src="assets/images/Telia/cover-telia.png"          alt="Telia">
+                        <img data-project="biljetter"                    src="assets/images/Biljetter/biljetter-cover.png"  alt="Biljetter">
                     </a>
                 </div>
                 <div class="content-block motto">
@@ -313,6 +316,7 @@
     <script src="js/index.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/work-preview.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             initNavigation('index');

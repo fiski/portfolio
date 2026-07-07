@@ -339,6 +339,7 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 - **Don't mix coding styles** - Be consistent with existing patterns
 - **Don't introduce security vulnerabilities** - Sanitize inputs, be careful with API data
 - **Use /dev/null in Git Bash, not nul** - Windows reserved filenames cause issues
+- **Don't add co-author attribution** - Never add "Co-Authored-By: Claude" or any AI tool attribution to commits
 
 ### Preferences
 

@@ -67,7 +67,6 @@ h3 {
     padding-left: 3rem;
     padding-right: 3rem;
     height: auto;
-    overflow-x: hidden; /* Prevent horizontal overflow from carousel */
     padding-bottom: 1rem;
 }
 

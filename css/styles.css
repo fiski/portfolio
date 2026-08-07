@@ -762,16 +762,25 @@ h3 {
 
 }
 
-/* Work-block project rows — interactive hover targets that drive the
-   featured-project slideshow on the homepage. Deliberately separate from
-   .list-item.small so the static lists on /extensions stay non-interactive. */
-.work-list-item {
+/* Interactive list rows — hover/press affordance for rows that act as a link
+   target. Opt-in by design: static prose rows (e.g. the descriptions on
+   /extensions) must never pick up a pointer cursor. Two flavours share the
+   treatment below:
+     .work-list-item        homepage work list, drives the featured-project slideshow
+     .list-item--interactive  modifier on .list-item, used by the /extensions link rows
+   Both swap .list-item's border-bottom for an ::after divider so it can be
+   hidden while the row is highlighted. */
+.work-list-item,
+.list-item--interactive {
   position: relative;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.work-list-item {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0.5rem 1rem;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
 
   p {
     font-size: var(--label---small);
@@ -779,7 +788,17 @@ h3 {
   }
 }
 
-.work-list-item::after {
+/* Negative margins keep the row's text aligned with the static rows above it
+   while letting the hover highlight bleed into .content-block's 1.5rem padding. */
+.list-item--interactive {
+  padding: 0.5rem 0.5rem 1rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  border-bottom: none;
+}
+
+.work-list-item::after,
+.list-item--interactive::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -789,15 +808,21 @@ h3 {
   background-color: var(--color-neutral-grey);
 }
 
-.work-list-item:last-child::after {
+.work-list-item:last-child::after,
+.list-item--interactive:last-child::after {
   display: none;
 }
 
-.work-list-item:hover  { background-color: rgba(0, 0, 0, 0.04); border-radius: 0.5rem; }
-.work-list-item:active { background-color: rgba(0, 0, 0, 0.08); border-radius: 0.5rem; }
+.work-list-item:hover,
+.list-item--interactive:hover  { background-color: rgba(0, 0, 0, 0.04); border-radius: 0.5rem; }
+
+.work-list-item:active,
+.list-item--interactive:active { background-color: rgba(0, 0, 0, 0.08); border-radius: 0.5rem; }
 
 .work-list-item:hover::after,
-.work-list-item:active::after { display: none; }
+.work-list-item:active::after,
+.list-item--interactive:hover::after,
+.list-item--interactive:active::after { display: none; }
 
 .list-item.small.paragraph {
   gap: 1rem;

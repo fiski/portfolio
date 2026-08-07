@@ -4,7 +4,7 @@
      * Moving down the list: current exits up, new enters from below.
      * Moving up the list: current exits down, new enters from above.
      *
-     * List order: coop(0) → volvo(1) → telia(2) → biljetter(3)
+     * List order: coop(0) → volvo(1) → telia(2)
      */
     function initWorkPreview() {
         var wp        = CONFIG.WORK_PREVIEW;
@@ -73,13 +73,19 @@
 
         listItems.forEach(function (item) {
             item.addEventListener('mouseenter', function () {
-                switchPreview(item.dataset.project);
+                var projectId = item.dataset.project;
+                // Placeholder rows (e.g. Biljetter) aren't in wp.PROJECTS — treat
+                // hovering them the same as leaving the list: fall back to default.
+                switchPreview(wp.PROJECTS[projectId] ? projectId : wp.DEFAULT);
             });
         });
 
         var workBlock = document.querySelector(wp.SELECTORS.WORK_BLOCK);
         if (workBlock) {
-            workBlock.addEventListener('mouseleave', function () {
+            workBlock.addEventListener('mouseleave', function (event) {
+                // Moving straight into the featured card (e.g. to click through)
+                // isn't leaving the preview interaction — don't reset in that case.
+                if (preview.contains(event.relatedTarget)) return;
                 switchPreview(wp.DEFAULT);
             });
         }

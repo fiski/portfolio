@@ -4,7 +4,7 @@
      * Moving down the list: current exits up, new enters from below.
      * Moving up the list: current exits down, new enters from above.
      *
-     * List order: coop(0) → volvo(1) → telia(2)
+     * List order: coop(0) → volvo(1) → telia(2) → biljetter(3)
      */
     function initWorkPreview() {
         var wp        = CONFIG.WORK_PREVIEW;
@@ -63,7 +63,13 @@
                 preview.classList.remove(p.cssClass);
             });
             preview.classList.add(project.cssClass);
-            previewLink.href         = project.href || '#';
+            // Unpublished projects have no href — drop the attribute entirely so
+            // the card isn't clickable or focusable rather than linking to '#'.
+            if (project.href) {
+                previewLink.href = project.href;
+            } else {
+                previewLink.removeAttribute('href');
+            }
             titleEl.textContent      = project.title;
             subtitleEl.textContent   = project.subtitle || '';
             subtitleEl.style.display = project.subtitle ? '' : 'none';
@@ -74,21 +80,38 @@
         listItems.forEach(function (item) {
             item.addEventListener('mouseenter', function () {
                 var projectId = item.dataset.project;
-                // Placeholder rows (e.g. Biljetter) aren't in wp.PROJECTS — treat
-                // hovering them the same as leaving the list: fall back to default.
+                // Any row without a matching wp.PROJECTS entry is treated the same
+                // as leaving the list: fall back to the default project.
                 switchPreview(wp.PROJECTS[projectId] ? projectId : wp.DEFAULT);
             });
         });
 
         var workBlock = document.querySelector(wp.SELECTORS.WORK_BLOCK);
-        if (workBlock) {
-            workBlock.addEventListener('mouseleave', function (event) {
-                // Moving straight into the featured card (e.g. to click through)
-                // isn't leaving the preview interaction — don't reset in that case.
-                if (preview.contains(event.relatedTarget)) return;
-                switchPreview(wp.DEFAULT);
-            });
+        if (!workBlock) return;
+
+        // The work card and the preview are separate grid children with a 1rem
+        // column gap between them, so moving from one to the other fires
+        // mouseleave with relatedTarget set to the grid — not the preview.
+        // Delay the reset just long enough to cross that gap, and cancel it
+        // on arrival so clicking through to a hovered project still works.
+        var resetTimer = null;
+
+        function cancelReset() {
+            clearTimeout(resetTimer);
+            resetTimer = null;
         }
+
+        function scheduleReset() {
+            cancelReset();
+            resetTimer = setTimeout(function () {
+                switchPreview(wp.DEFAULT);
+            }, wp.RESET_DELAY);
+        }
+
+        [workBlock, preview].forEach(function (el) {
+            el.addEventListener('mouseenter', cancelReset);
+            el.addEventListener('mouseleave', scheduleReset);
+        });
     }
 
     document.addEventListener(CONFIG.EVENTS.DOM_CONTENT_LOADED, initWorkPreview);

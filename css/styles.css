@@ -762,17 +762,24 @@ h3 {
 
 }
 
-.list-item.small {
+/* Work-block project rows — interactive hover targets that drive the
+   featured-project slideshow on the homepage. Deliberately separate from
+   .list-item.small so the static lists on /extensions stay non-interactive. */
+.work-list-item {
   position: relative;
-  padding-top: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.15s ease;
+
+  p {
+    font-size: var(--label---small);
+    color: var(--color-text-grey);
+  }
 }
 
-.list-item.small::after {
+.work-list-item::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -782,15 +789,15 @@ h3 {
   background-color: var(--color-neutral-grey);
 }
 
-.list-item.small:last-child::after {
+.work-list-item:last-child::after {
   display: none;
 }
 
-.list-item.small:hover  { background-color: rgba(0, 0, 0, 0.04);  border-radius: 0.5rem; }
-.list-item.small:active { background-color: rgba(0, 0, 0, 0.08); border-radius: 0.5rem; }
+.work-list-item:hover  { background-color: rgba(0, 0, 0, 0.04); border-radius: 0.5rem; }
+.work-list-item:active { background-color: rgba(0, 0, 0, 0.08); border-radius: 0.5rem; }
 
-.list-item.small:hover::after,
-.list-item.small:active::after { display: none; }
+.work-list-item:hover::after,
+.work-list-item:active::after { display: none; }
 
 .list-item.small.paragraph {
   gap: 1rem;

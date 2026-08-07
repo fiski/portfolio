@@ -135,13 +135,18 @@ const CONFIG = {
   // Work preview hover configuration
   WORK_PREVIEW: {
     DEFAULT: 'coop',
+    // Grace period (ms) before resetting to the default project. The work card
+    // and the preview are separate grid children with a 1rem column gap, so the
+    // pointer briefly leaves both when travelling between them.
+    RESET_DELAY: 120,
     PROJECTS: {
       coop:      { cssClass: 'project--coop',      href: 'coop.html',  img: 'assets/images/Coop/coop-ver2.png',            alt: 'Coop Insights', title: 'Coop Insights', subtitle: 'Coop Sverige' },
       volvo:     { cssClass: 'project--volvo',     href: 'volvo.html', img: 'assets/images/volvo/Cover-Volvo.png',         alt: 'Volvo',         title: 'Volvo',         subtitle: 'Volvo Cars' },
-      telia:     { cssClass: 'project--telia',     href: 'telia.html', img: 'assets/images/Telia/cover-telia.png',         alt: 'Telia',         title: 'Telia',         subtitle: 'Mitt Telia' }
+      telia:     { cssClass: 'project--telia',     href: 'telia.html', img: 'assets/images/Telia/cover-telia.png',         alt: 'Telia',         title: 'Telia',         subtitle: 'Mitt Telia' },
+      biljetter: { cssClass: 'project--biljetter', href: null,         img: 'assets/images/Biljetter/biljetter-cover.png', alt: 'Biljetter',     title: 'Biljetter',     subtitle: 'Coming soon' }
     },
     SELECTORS: {
-      LIST_ITEM:    '.list-item[data-project]',
+      LIST_ITEM:    '.work-list-item[data-project]',
       WORK_BLOCK:   '.content-block.work',
       PREVIEW:      '.js-work-preview',
       PREVIEW_LINK: '.featured-project-link',

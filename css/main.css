@@ -810,6 +810,14 @@ body:not(.index-bg) .featured-project-link:hover img {
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+.dropdown-item-subtext {
+    display: block;
+    margin-top: 0.125rem;
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    color: var(--color-text-grey);
+}
+
 .dropdown-item:last-child {
     border-bottom: none;
 }

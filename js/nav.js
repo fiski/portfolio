@@ -27,8 +27,8 @@ function createNavigation(currentPage) {
 
                 </button>
                 <div class="${CONFIG.CLASSES.DROPDOWN_MENU}">
-                    <a href="${CONFIG.ASSETS.CV_ENGLISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">English</a>
-                    <a href="${CONFIG.ASSETS.CV_SWEDISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">Swedish</a>
+                    <a href="${CONFIG.ASSETS.CV_ENGLISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">English<span class="${CONFIG.CLASSES.DROPDOWN_ITEM_SUBTEXT}">${CONFIG.TEXT.CV_OUT_OF_DATE}</span></a>
+                    <a href="${CONFIG.ASSETS.CV_SWEDISH}" class="${CONFIG.CLASSES.DROPDOWN_ITEM}" target="_blank">Swedish<span class="${CONFIG.CLASSES.DROPDOWN_ITEM_SUBTEXT}">${CONFIG.TEXT.CV_OUT_OF_DATE}</span></a>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ function createBottomNav(currentPage) {
 
     const sheet = document.createElement('div');
     sheet.className = 'bottom-nav-resume-sheet';
-    sheet.innerHTML = `<a href="${CONFIG.ASSETS.CV_ENGLISH}" target="_blank">English CV</a><a href="${CONFIG.ASSETS.CV_SWEDISH}" target="_blank">Swedish CV</a>`;
+    sheet.innerHTML = `<a href="${CONFIG.ASSETS.CV_ENGLISH}" target="_blank">English CV<span class="${CONFIG.CLASSES.DROPDOWN_ITEM_SUBTEXT}">${CONFIG.TEXT.CV_OUT_OF_DATE}</span></a><a href="${CONFIG.ASSETS.CV_SWEDISH}" target="_blank">Swedish CV<span class="${CONFIG.CLASSES.DROPDOWN_ITEM_SUBTEXT}">${CONFIG.TEXT.CV_OUT_OF_DATE}</span></a>`;
 
     const btn = document.createElement('button');
     btn.className = 'bottom-nav-item' + (isResumeActive ? ' active' : '');

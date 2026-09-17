@@ -1549,6 +1549,13 @@ a:hover {
     border-bottom: none;
 }
 
+.bottom-nav-resume-sheet a .dropdown-item-subtext {
+    margin-top: 0.125rem;
+    font-family: 'Prompt', sans-serif;
+    font-size: 11px;
+    color: var(--color-text-grey);
+}
+
 .bottom-nav-resume-sheet a:hover {
     background: rgba(20, 81, 237, 0.06);
     opacity: 1;

@@ -57,6 +57,7 @@ const CONFIG = {
     DROPDOWN_TOGGLE: 'dropdown-toggle',
     DROPDOWN_MENU: 'dropdown-menu',
     DROPDOWN_ITEM: 'dropdown-item',
+    DROPDOWN_ITEM_SUBTEXT: 'dropdown-item-subtext',
     LOGO: 'logo',
     NAV_LEFT: 'nav-left',
     NAV_RIGHT: 'nav-right'
@@ -97,7 +98,8 @@ const CONFIG = {
     ERROR_HTTP: 'HTTP error! status: ',
     ERROR_RATE_LIMIT: 'GitHub API rate limit exceeded',
     ERROR_NO_DATA: 'No commit data available',
-    ERROR_INVALID_FORMAT: 'Invalid response format'
+    ERROR_INVALID_FORMAT: 'Invalid response format',
+    CV_OUT_OF_DATE: 'Out of date!'
   },
 
   // Asset paths

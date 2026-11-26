@@ -229,15 +229,6 @@ h3 {
   white-space: nowrap;
 }
 
-#word7 {
-  color: lightcoral;
-  opacity: 0;
-}
-
-#word7:hover {
-  opacity: 100;
-}
-
 
 
 .extension-grid {  display: grid;

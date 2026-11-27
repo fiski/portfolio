@@ -68,12 +68,13 @@ const CONFIG = {
     REPO: 'fiski/portfolio',
     BASE_URL: 'https://api.github.com/repos/fiski/portfolio',
     ENDPOINTS: {
-      COMMITS: '/commits',
-      COMMITS_MAIN: '/commits/main'
+      COMMITS: '/commits?per_page=1'
     },
+    // Cache the commit date to stay under the 60 requests/hour unauthenticated limit
+    CACHE_KEY: 'portfolio:last-commit-date',
+    CACHE_TTL_MS: 60 * 60 * 1000,
     HEADERS: {
-      Accept: 'application/vnd.github.v3+json',
-      'User-Agent': 'Mozilla/5.0'
+      Accept: 'application/vnd.github.v3+json'
     }
   },
 
@@ -93,12 +94,10 @@ const CONFIG = {
   // Text strings
   TEXT: {
     LAST_UPDATED_PREFIX: 'Last updated: ',
-    LAST_UPDATED_ERROR: 'Unable to fetch',
     LAST_UPDATED_GITHUB: 'Check GitHub for latest changes',
     ERROR_HTTP: 'HTTP error! status: ',
     ERROR_RATE_LIMIT: 'GitHub API rate limit exceeded',
     ERROR_NO_DATA: 'No commit data available',
-    ERROR_INVALID_FORMAT: 'Invalid response format',
     CV_OUT_OF_DATE: 'Out of date!'
   },
 

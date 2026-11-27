@@ -63,19 +63,11 @@ const CONFIG = {
     NAV_RIGHT: 'nav-right'
   },
 
-  // GitHub API configuration
-  GITHUB_API: {
-    REPO: 'fiski/portfolio',
-    BASE_URL: 'https://api.github.com/repos/fiski/portfolio',
-    ENDPOINTS: {
-      COMMITS: '/commits?per_page=1'
-    },
-    // Cache the commit date to stay under the 60 requests/hour unauthenticated limit
-    CACHE_KEY: 'portfolio:last-commit-date',
-    CACHE_TTL_MS: 60 * 60 * 1000,
-    HEADERS: {
-      Accept: 'application/vnd.github.v3+json'
-    }
+  // Footer "Last updated" configuration
+  FOOTER: {
+    // document.lastModified falls back to the current time when the server sends
+    // no Last-Modified header; dates newer than this are treated as unknown
+    LAST_MODIFIED_MIN_AGE_MS: 5000
   },
 
   // Event names
@@ -94,10 +86,7 @@ const CONFIG = {
   // Text strings
   TEXT: {
     LAST_UPDATED_PREFIX: 'Last updated: ',
-    LAST_UPDATED_GITHUB: 'Check GitHub for latest changes',
-    ERROR_HTTP: 'HTTP error! status: ',
-    ERROR_RATE_LIMIT: 'GitHub API rate limit exceeded',
-    ERROR_NO_DATA: 'No commit data available',
+    LAST_UPDATED_FALLBACK: 'Check GitHub for latest changes',
     CV_OUT_OF_DATE: 'Out of date!'
   },
 

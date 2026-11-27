@@ -27,7 +27,6 @@ A personal portfolio showcasing UX/UI design work, professional experience, and 
 - Configuration-driven architecture
 - Mobile-first responsive design
 - Performance-optimized animations
-- GitHub API integration
 
 ## Architecture & Structure
 
@@ -51,13 +50,14 @@ portfolio/
 │   ├── button.css         # Button components
 │   └── reset.css          # CSS reset
 │
-├── js/                     # 538 lines total
-│   ├── config.js          # Centralized configuration (126 lines)
-│   ├── nav.js             # Navigation component logic (183 lines)
-│   ├── footer.js          # Footer & GitHub commit fetching (52 lines)
-│   ├── index.js           # Main page bounce animation (55 lines)
-│   ├── bounce-words.js    # Word bouncing animation logic (72 lines)
-│   └── git-info.js        # Alternative GitHub info fetcher (50 lines)
+├── js/
+│   ├── config.js          # Centralized configuration
+│   ├── nav.js             # Navigation component logic
+│   ├── footer.js          # Footer & "Last updated" date
+│   ├── index.js           # Homepage script (legacy bounce copy, no-op without .bounce)
+│   ├── bounce-words.js    # Word bouncing animation logic (about page)
+│   ├── carousel.js        # Homepage carousel
+│   └── work-preview.js    # Work list hover preview
 │
 ├── components/
 │   └── footer.html        # Reusable footer component
@@ -82,9 +82,7 @@ portfolio/
 - Responsive behavior
 
 **Footer (footer.js):**
-- Dynamic "Last updated" timestamp
-- GitHub API integration (fiski/portfolio repo)
-- Rate limit handling
+- Dynamic "Last updated" timestamp (GitHub Pages deploy time)
 - Credit attribution
 
 **Animations:**
@@ -98,7 +96,7 @@ All magic strings, constants, and configuration values are centralized in `js/co
 - Page identifiers and routes
 - Background class mappings
 - DOM selectors and CSS classes
-- GitHub API configuration
+- Footer configuration
 - Event names and keyboard keys
 - Text strings (Swedish/English)
 - Asset and component paths
@@ -173,7 +171,7 @@ All magic strings, constants, and configuration values are centralized in `js/co
   - `camelCase` for variables and functions
   - `UPPER_CASE` for constants
   - Descriptive names (avoid single letters except loop counters)
-- **Error handling:** Handle API failures gracefully (GitHub rate limits, network errors)
+- **Error handling:** Handle network failures gracefully (e.g. footer component fetch)
 - **Performance:** Use `requestAnimationFrame` for animations, debounce/throttle where needed
 
 ## Development Workflows
@@ -201,7 +199,6 @@ All magic strings, constants, and configuration values are centralized in `js/co
 - **No build process:** Edit HTML, CSS, and JS files directly
 - **Live preview:** Use browser dev tools and live reload extensions
 - **Testing viewports:** Test at mobile (320px-767px), tablet (768px-1023px), and desktop (1024px+)
-- **GitHub API:** Be aware of rate limits (60 requests/hour unauthenticated)
 - **Icons:** Use Feather Icons library loaded from CDN
   ```javascript
   feather.replace(); // Call after adding new icons to DOM
@@ -231,7 +228,7 @@ All magic strings, constants, and configuration values are centralized in `js/co
 **Feature testing:**
 - Navigation (active states, dropdown menu, Escape key)
 - Animations (fade-in, word bouncing, smooth transitions)
-- GitHub API integration (last updated footer)
+- "Last updated" footer date
 - Form submissions (if applicable)
 - External links (CV downloads, LinkedIn, email)
 
@@ -260,15 +257,10 @@ All magic strings, constants, and configuration values are centralized in `js/co
 
 **Functionality:**
 - Displays "Last updated" timestamp
-- Fetches latest commit date from GitHub API
-- Handles rate limits gracefully (shows fallback message)
-- Repository: `fiski/portfolio`
+- Reads `document.lastModified` (GitHub Pages sends the deploy time as `Last-Modified`)
+- No GitHub API call, so no rate limits
+- Falls back to `CONFIG.TEXT.LAST_UPDATED_FALLBACK` when no `Last-Modified` header is sent
 - Credit attribution
-
-**API Integration:**
-```javascript
-fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
-```
 
 ### Animation System
 
@@ -441,20 +433,13 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 
 ## Technical Details
 
-### GitHub API Integration
+### "Last updated" Footer Date
 
-**Purpose:** Display last commit date in footer
+**Source:** `document.lastModified`. GitHub Pages serves the deploy time as the `Last-Modified` header for every page.
 
-**Endpoint:** `https://api.github.com/repos/fiski/portfolio/commits?per_page=1`
+**Why not the GitHub API:** unauthenticated requests are limited to 60/hour per IP, which visitors exhausted quickly.
 
-**Rate limits:**
-- Unauthenticated: 60 requests/hour
-- Authenticated: 5000 requests/hour
-
-**Error handling:**
-- Rate limit exceeded: Show fallback message
-- Network errors: Fail gracefully, show default text
-- Invalid response: Handle missing data
+**Fallback:** when no `Last-Modified` header is sent, browsers report the current time; `footer.js` treats dates newer than `CONFIG.FOOTER.LAST_MODIFIED_MIN_AGE_MS` as unknown and shows the fallback text. Locally it shows the file's modified time.
 
 **Implementation:** See `js/footer.js`
 
@@ -501,7 +486,6 @@ fetch('https://api.github.com/repos/fiski/portfolio/commits?per_page=1')
 - **Live site:** https://fiski.github.io/portfolio/ (or custom domain)
 - **Feather Icons:** https://feathericons.com/
 - **Google Fonts:** https://fonts.google.com/
-- **GitHub API docs:** https://docs.github.com/en/rest
 
 ## Version History
 
